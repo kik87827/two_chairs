@@ -24,6 +24,7 @@ html:not(.touchmode){
     &:after{bottom:4px;}
 }
 .btn_header_menu_line{position:absolute;top:50%;left:0;width:15px;height:0;border-bottom:1px solid #fff;margin-top:-1px;}
+.btn_header_app_menu{width:24px;height:24px; display:inline-block; background:url("../images/ico_menu.svg") no-repeat 0 0/100% auto;}
 .top_logo{}
 .top_logo_dom{
     > img{}
@@ -81,3 +82,12 @@ html:not(.touchmode){
 .footer_copy_para{font-size:14px;}
 .footer_info_para{color:#222222; opacity:.5; font-weight:500;}
 .footer_copy_para{margin-top:7px; color:#222222; opacity:.3; }
+
+
+@media (max-width:1680px){
+    .btn_topgo{transform: translateX(0);}
+}
+
+@media (hover: none) and (pointer: coarse) {
+  /* 터치 전용 스타일 */
+}
