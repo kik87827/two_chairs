@@ -1,0 +1,7 @@
+
+**/*.css
+**/*.scss
+
+src/include/
+
+dist/js/

@@ -1,0 +1,32 @@
+{
+  "name": "twochairs",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp-sourcemaps": "^3.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-beautify": "^3.0.0",
+    "gulp-connect": "^5.7.0",
+    "gulp-cssbeautify": "^3.0.1",
+    "gulp-file-include": "^2.2.2",
+    "gulp-html-beautify": "^1.0.1",
+    "gulp-jsbeautifier": "^3.0.1",
+    "gulp-jshint": "^2.1.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-remove-empty-lines": "^0.1.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-watch": "^5.0.1",
+    "gulp-webserver": "^0.9.1",
+    "jshint": "^2.13.5",
+    "sass": "^1.54.0"
+  },
+  "description": ""
+}

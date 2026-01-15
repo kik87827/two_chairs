@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+table th,
+strong {
+  font-weight: normal;
+}
+body {
+  margin: 20px;
+}
+h1 {
+  margin: 0 0 10px 0;
+  color: #000;
+  font-size: 30px;
+  font-family: "Pretendard";
+  font-weight: 700;
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  text-decoration: underline;
+}
+.list_w table {
+  width: 100%;
+  margin: 20px auto;
+  border-top: solid 2px #555;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 13px;
+  text-align: center;
+}
+.list_w table tr:hover {
+  background: #f3f3f3;
+}
+.list_w table th {
+  padding: 10px 0;
+  border: solid 1px #ddd;
+  background: #efefef;
+  vertical-align: middle;
+  font-weight: 400;
+  font-size: 13px;
+}
+.list_w table td {
+  padding: 5px 3px;
+  border: solid 1px #ccc;
+  vertical-align: middle;
+}
+.lastmdate {
+  color: #1155cc;
+}
+.stand_by {
+  color: #777;
+}
+.stop {
+  color: #787878;
+}
+.ing {
+  color: blue;
+}
+.bgo {
+  text-align: left;
+}
+.end {
+  background: green;
+  color: #fff;
+}
+.else {
+  color: red;
+}
+.modify {
+  color: #ff5400;
+}
+.else2 {
+  color: #ff5400;
+}
+.list_w table td.link,
+.list_w table td.td_url,
+.list_w table td.etc {
+  text-align: left;
+  padding-left: 10px;
+}
+.ing_w {
+  border: 1px solid #000;
+  margin: 0 0 20px;
+  padding: 5px 10px;
+}
+.t_tit {
+  margin: 20px 0 10px;
+  font-size: 20px;
+}
+.ing_w .inglist {
+}
+.ing_w .inglist li {
+  padding: 10px;
+  border-bottom: 1px solid #999;
+}
+.ing_w .inglist li:last-child {
+  border-bottom: 0;
+}
+.ing_w .inglist .date {
+  font-weight: bold;
+}
+.ing_w .inglist .text {
+}
+.ing_w .inglist .text .ingtext {
+  font-weight: bold;
+}
+.guidelist {
+  padding: 8px 0;
+}
+.guidelist li {
+  padding: 2px 10px;
+}
+.alignleft {
+  text-align: left;
+  padding-left: 10px !important;
+}
+.depth td {
+  background: #253d52;
+  color: #fff;
+  text-align: left;
+  font-size: 20px;
+  padding: 10px 20px !important;
+}
+.depth2 td {
+  background: #e2dbfb;
+  color: #000;
+  text-align: left;
+  font-size: 16px;
+  padding: 10px 20px !important;
+}
+.dev_notice {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 10px;
+  margin: 30px 0;
+}
+
+.level_1 td{background:#fcdada;}
+.level_2 td{background:#fce5da;}
+.level_3 td{background:#fcebda;}
+.level_4 td{background:#fffcea;}

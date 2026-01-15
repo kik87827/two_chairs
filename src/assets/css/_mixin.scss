@@ -1,0 +1,87 @@
+
+
+@use "sass:math";
+
+$primary : #13479b;;
+$secondary : #25b0f5;
+$sub_color : #D46C11;
+
+
+$tablet : 1299px;
+$mobile_large : 1023px;
+$mobile : 767px;
+$mobile_size1 : 550px;
+$mobile_size2 : 450px;
+$mobile_size3 : 374px;
+$mobile_small : 359px;
+$mobile_xsmall : 319px;
+
+$warn : #e84854;
+
+
+@function rem($value) {
+    $remValue: math.div($value, 16) + rem;
+    @return $remValue;
+}
+
+@mixin imgThum {
+    width:100%;height:100%;object-fit: cover; object-position: 50% 50%; position:absolute;top:0;left:0;
+}
+
+
+@mixin fontTransform {
+    transform: skew(.5deg);
+}
+
+
+@mixin gmarket {
+    font-family: 'GmarketSans','Pretendard',dotum;
+}
+
+@mixin rubik {
+    font-family: 'Rubik Regular','Pretendard',dotum;
+}
+
+@mixin rubik_medium {
+    font-family: 'Rubik Medium','Pretendard',dotum;
+}
+
+@mixin rubik_bold {
+    font-family: 'Rubik Bold','Pretendard',dotum;
+}
+
+@mixin cont_center {
+    max-width:1280px;padding:0 30px; margin:0 auto;
+}
+
+@mixin dataImage {
+    display:block; width:100%;height:100%;position:absolute;top:0;left:0; object-fit: contain; object-position: 50% 50%;
+}
+
+@mixin dataImage2 {
+    display:block; width:100%;height:100%;position:absolute;top:0;left:0; object-fit: cover; object-position: 50% 50%;
+}
+
+@mixin dataImage3 {
+    display:block; width:100%;height:100%;position:absolute;top:0;left:0; object-fit: cover; object-position:0 0;
+}
+
+@mixin clamp ($count) {
+    word-break:break-all;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp:$count;overflow: hidden;
+}
+
+@mixin bgicon {
+    background-repeat: no-repeat; background-position:0 0; background-size:100% auto;
+}
+
+@mixin font(
+  $size,
+  $weight: normal,
+  $lineHeight: normal,
+  $color: inherit
+) {
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lineHeight;
+  color: $color;
+}
