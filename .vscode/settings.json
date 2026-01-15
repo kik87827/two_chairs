@@ -1,0 +1,23 @@
+{
+  "editor.formatOnSave": false,
+  "[html]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[css]": {
+    "editor.formatOnSave": false
+  },
+  "[scss]": {
+    "editor.formatOnSave": false
+  },
+  "liveServer.settings.port": 5506,
+  "editor.codeActionsOnSave": {},
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true
+}
