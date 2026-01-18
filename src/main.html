@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   @@include('./include/_head.html')
 
@@ -114,7 +114,7 @@
                 <div class="swiper-slide">
                   <a href="#" class="mv_swiper_chip">
                     <div class="mv_flag_layer">
-                      <div class="mv_flag_unique">
+                      <div class="flag_unique_wrap">
                         <dl class="flag_unique_obj">
                           <dt>
                             <i class="ico shape_time"></i>
@@ -148,7 +148,7 @@
                 <div class="swiper-slide">
                   <a href="#" class="mv_swiper_chip">
                     <div class="mv_flag_layer">
-                      <div class="mv_flag_unique">
+                      <div class="flag_unique_wrap">
                         <dl class="flag_unique_obj">
                           <dt>
                             <i class="ico shape_time"></i>
@@ -182,7 +182,41 @@
                 <div class="swiper-slide">
                   <a href="#" class="mv_swiper_chip">
                     <div class="mv_flag_layer">
-                      <div class="mv_flag_unique">
+                      <div class="flag_unique_wrap">
+                        <dl class="flag_unique_obj">
+                          <dt>
+                            <i class="ico shape_time"></i>
+                            <span class="text_node">타임세일</span>
+                          </dt>
+                          <dd><span class="text_node">00:07:05남음</span></dd>
+                        </dl>
+                      </div>
+                      <div class="mv_flag_box">
+                        <span class="text_node">가전</span>
+                      </div>
+                    </div>
+                    <div class="mv_swiper_imgban">
+                      <img src="./assets/images/mv_pc_ban.png" class="pc_img" alt="" />
+                      <img src="./assets/images/mv_mb_ban.png" class="mb_img" alt="" />
+                    </div>
+                    <div class="mv_swiper_copy_wrap">
+                      <p class="main_copy">
+                        LG 트롬 AI 03
+                        <br />
+                        오브제컬렉션 워시타워
+                      </p>
+                      <p class="sub_copy">
+                        AI를 더하여 한번 더 진화한 세탁∙건조 솔루션
+                        <br />
+                        세탁부터 건조까지 한눈에 쉽고 빠르게 사용해보세요
+                      </p>
+                    </div>
+                  </a>
+                </div>
+                <div class="swiper-slide">
+                  <a href="#" class="mv_swiper_chip">
+                    <div class="mv_flag_layer">
+                      <div class="flag_unique_wrap">
                         <dl class="flag_unique_obj">
                           <dt>
                             <i class="ico shape_time"></i>
@@ -216,9 +250,21 @@
               </div>
             </div>
             <div class="mv_current_container">
-              <div class="mv_title_row">
+              <div class="mv_out_control_layer">
+                <ul class="mv_out_control_list">
+                  <li>
+                    <a href="#" class="btn_mv_auto stop"></a>
+                    <a href="#" class="btn_mv_auto play"></a>
+                  </li>
+                  <li>
+                    <div class="swiper-pagination mv-pagination"></div>
+                  </li>
+                </ul>
+              </div>
+              <div class="mv_current_render"></div>
+              <!-- <div class="mv_title_row">
                 <ul class="mv_title_chip_list">
-                  <li><span class="mv_title_chip">LG 가전</span></li>
+                  <li><strong class="mv_title_chip highlight">LG 가전</strong></li>
                   <li><span class="mv_title_chip">LG 나노셀 AI 벽걸이 TV</span></li>
                 </ul>
               </div>
@@ -227,42 +273,97 @@
                   <span class="text_node">400,000</span>
                   <span class="text_circle_unit">P</span>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
-        <div class="mc_zone">
-          <div class="mc_block">
-            <div class="mc_title_row">
-              <h3 class="mc_title">300만원 상품</h3>
-              <div class="mc_title_else_wrap">
-                <ul class="sort_chip_wrap">
-                  <li>
-                    <a href="#" class="sort_chip_item"></a>
-                  </li>
-                  <li>
-                    <a href="#" class="sort_chip_item shape_2"></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="mc_cont_row">
-              <div class="grid_item_wrap">
-                <ul class="grid_item_list">
-                  <li>
-                    <div class="grid_item">
-                      <div class="thum_row">
-                        <img src="./assets/images/" alt="" />
-                      </div>
-                      <div class="spec_row"></div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+        @@include('_mc.html')
       </main>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          mvSwiper();
+        });
+
+        function mvSwiper() {
+          let mv_current_data = [
+            {
+              product_brand: "LG 가전",
+              product_name: "LG 나노셀 AI 벽걸이 TV",
+              product_point: "400,000",
+            },
+            {
+              product_brand: "조선호텔앤리조트",
+              product_name: "모바일 금액권 500,000원",
+              product_point: "500,000",
+            },
+            {
+              product_brand: "농협",
+              product_name: "한우 1등급 소고기 선물세트",
+              product_point: "400,000",
+            },
+            {
+              product_brand: "LG 가전",
+              product_name: "LG 나노셀 AI 벽걸이 TV",
+              product_point: "400,000",
+            },
+          ];
+          const mv_swiper = new Swiper(".mv_swiper_container", {
+            loop: true,
+            speed: 800,
+            centeredSlides: true,
+            slidesPerView: "auto",
+
+            pagination: {
+              el: ".swiper-pagination.mv-pagination",
+              type: "fraction",
+              renderFraction: function (currentClass, totalClass) {
+                return `
+                  <span class="${currentClass}"></span>
+                  <span class="swiper-pagination-part">/</span>
+                  <span class="${totalClass}"></span>
+                `;
+              },
+            },
+
+            on: {
+              init(mv_swiper) {
+                console.log("최초 로드 완료", mv_swiper.realIndex);
+                mv_current_render(mv_swiper.realIndex);
+              },
+              slideChangeTransitionStart(mv_swiper) {
+                console.log("슬라이드 전환 완료", mv_swiper.realIndex);
+                mv_current_render(mv_swiper.realIndex);
+              },
+            },
+
+            navigation: {
+              nextEl: ".btn_mv_nav.next",
+              prevEl: ".btn_mv_nav.prev",
+            },
+
+            /* autoplay: {
+              delay: 3000,
+              disableOnInteraction: false,
+            }, */
+          });
+          function mv_current_render(index) {
+            $(".mv_current_render").empty().html(`
+              <div class="mv_title_row">
+                  <ul class="mv_title_chip_list">
+                    <li><strong class="mv_title_chip highlight">${mv_current_data[index].product_brand}</strong></li>
+                    <li><span class="mv_title_chip">${mv_current_data[index].product_name}</span></li>
+                  </ul>
+                </div>
+                <div class="mv_price_row">
+                  <div class="mv_price_item">
+                    <span class="text_node">${mv_current_data[index].product_point}</span>
+                    <span class="text_circle_unit">P</span>
+                  </div>
+                </div>
+            `);
+          }
+        }
+      </script>
       @@include('./include/_footer.html')
     </div>
   </body>

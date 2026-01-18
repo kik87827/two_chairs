@@ -75,3 +75,180 @@
          .text_node{font-size:16px; min-height:51px;}
     }
 }
+
+
+
+/* main */
+.mv_zone{position:relative;}
+.btn_mv_nav_wrap{position:absolute;top:50%;left:50%;transform: translateX(-50%);height:0; width:1400px; outline:1px solid red;z-index:5;}
+.btn_mv_nav{
+    display:inline-block; width:56px; height:56px; border-radius: 100%; background:#fff; box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.1); position:absolute; top:50%; transform: translateY(-50%);
+    &.prev{left:0;}
+    &.next{right:0;}
+}
+.mv_swiper_wrap{position:relative;height:500px;overflow: hidden;}
+.swiper, .swiper-container{
+    &.mv_swiper_container{
+         overflow:visible; width:1400px; margin:0 auto;
+        .swiper-wrapper{
+        }
+        .swiper-slide{
+            &:after{display:block;content:'';width:100%;height:100%;position:absolute;top:0;left:0;opacity:0;background:#000;z-index:10;transition:.4s;}
+            &.swiper-slide-active{
+
+            }
+            &.swiper-slide-next,
+            &.swiper-slide-prev{
+                &:after{opacity:.4;}
+                .mv_flag_layer{display:none;}
+            }
+            &.swiper-slide-next{
+
+            }
+            &.swiper-slide-prev{
+
+            }
+           /*  &.swiper-slide-next,
+            &.swiper-slide-prev{position:absolute;top:0;}
+            &.swiper-slide-next{right:-200%; z-index:20; left:auto;
+                &:after{display:block;content:'';width:100%;height:100%;position:absolute;top:0;left:0;opacity:.5;background:red;z-index:10}
+            }
+            &.swiper-slide-prev{} */
+        }
+    }
+}
+
+.mv_swiper_chip{display:block; margin:0 auto;}
+.mv_flag_layer{
+    position:absolute;top:0;left:0;
+    .flag_unique_wrap{}
+}
+
+.flag_unique_wrap{
+    &.theme_2{}
+}
+.flag_unique_obj{
+    dt,dd{}
+    dt{
+        .ico{
+            &.shape_time{}
+            &.shape_men{}
+        }
+        .text_node{}
+    }
+    dd{
+        .text_node{}
+    }
+}
+.mv_flag_box{
+    .text_node{}
+}
+.mv_swiper_imgban{
+    img{
+        &.pc_img{}
+        &.mb_img{}
+    }
+}
+.mv_swiper_copy_wrap{
+    .main_copy{
+        br{}
+    }
+    .sub_copy{
+        br{}
+    }
+}
+.mv_current_container{background: rgba(45, 31, 19, 0.8); position:absolute;bottom:0;left:50%;width:1400px;z-index:5; transform: translateX(-50%);}
+.mv_out_control_layer{}
+.mv_out_control_list{
+    > li{}
+    .btn_mv_auto{
+        &.stop{}
+        &.play{}
+    }
+}
+.swiper-pagination{
+    &.mv-pagination{
+        position:static;
+        .swiper-pagination-current{
+
+        }
+        .swiper-pagination-part{}
+        .swiper-pagination-total{}
+    }
+}
+.mv_title_row{}
+.mv_title_chip_list{
+    > li{
+
+    }
+}
+.mv_title_chip{
+    &.highlight{}
+}
+.mv_price_row{
+
+}
+.mv_price_item{
+    .text_node{}
+    .text_circle_unit{}
+}
+
+.mc_zone{max-width:1400px; margin:0 auto; padding:80px 30px 0;}
+.mc_block{
+    margin-bottom:80px;
+    &:last-of-type{margin-bottom:0;}
+}
+.mc_title_row{display:flex; justify-content: space-between; align-items: center; margin-bottom:32px;}
+.mc_title{font-size:24px; color:#121111; font-weight:500;}
+.mc_title_else_wrap{
+
+}
+.sort_chip_list{
+    display:flex; justify-content: flex-end; gap:5px;
+    > li{}
+}
+.sort_chip_item{
+    width:36px; height:36px; box-sizing: border-box; border:1px solid #EDEDED; display:inline-flex; justify-content: center; align-items: center;
+    &.shape_2{
+        .grid_box_ico{background-image:url("../images/ico_grid_2.svg")}
+    }
+    &.shape_3{
+        .grid_box_ico{background-image:url("../images/ico_grid_3.svg")}
+    }
+    &.active{
+        border-color:#2D1F13;
+        &.shape_2{
+            .grid_box_ico{background-image:url("../images/ico_grid_2_active.svg")}
+        }
+        &.shape_3{
+            .grid_box_ico{background-image:url("../images/ico_grid_3_active.svg")}
+        }
+    }
+}
+.grid_box_ico{
+    position:relative; width:24px; height:24px; @include bgicon;
+}
+.mc_cont_row{}
+.grid_item_wrap{
+
+}
+.grid_item_list{
+    display:flex; flex-wrap:wrap; gap:40px 25px; margin-right:-25px;
+    > li{
+        flex:0 0 calc(20% - 25px);
+    }
+}
+.grid_item{
+    .thum_row{
+        > img{}
+        .flag_unique_wrap{}
+    }
+    .spec_row{}
+}
+.grid_sub_node{}
+.grid_main_node{}
+.price_item_wrap{
+    .text_node{}
+    .text_circle_unit{}
+}
+/* // main */
