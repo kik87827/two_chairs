@@ -282,6 +282,7 @@
       <script>
         document.addEventListener("DOMContentLoaded", () => {
           mvSwiper();
+          gridControl();
         });
 
         function mvSwiper() {
@@ -327,12 +328,12 @@
 
             on: {
               init(mv_swiper) {
-                console.log("최초 로드 완료", mv_swiper.realIndex);
+                //console.log("최초 로드 완료", mv_swiper.realIndex);
                 mv_current_render(mv_swiper.realIndex);
                 autoEvent();
               },
               slideChangeTransitionStart(mv_swiper) {
-                console.log("슬라이드 전환 완료", mv_swiper.realIndex);
+                //console.log("슬라이드 전환 완료", mv_swiper.realIndex);
                 mv_current_render(mv_swiper.realIndex);
               },
             },
@@ -381,6 +382,37 @@
               e.currentTarget.classList.add("hidden");
             });
           }
+        }
+
+        function gridControl() {
+          const sort_chip_item = document.querySelectorAll(".sort_chip_item");
+          sort_chip_item.forEach((item) => {
+            //let activeItem = item.classList.contains("active") ? item : null;
+            item?.addEventListener("click", (e) => {
+              const etarget = e.currentTarget;
+              const epblock = etarget.closest(".mc_block");
+              const grid_list = epblock.querySelector(".grid_item_list");
+
+              let activeItem = epblock.querySelector(".sort_chip_item.active");
+
+              e.preventDefault();
+
+              //activeItem.classList.remove("active");
+              if (activeItem && activeItem !== etarget) {
+                activeItem.classList.remove("active");
+              }
+              etarget.classList.add("active");
+              activeItem = etarget;
+
+              if (etarget.classList.contains("shape_2")) {
+                console.log("shape_2");
+                grid_list.classList.add("type2");
+              } else {
+                console.log("shape_3");
+                grid_list.classList.remove("type2");
+              }
+            });
+          });
         }
       </script>
       @@include('./include/_footer.html')
