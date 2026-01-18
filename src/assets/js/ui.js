@@ -58,9 +58,7 @@ const uiBase = {
   },
 };
 
-
 function layoutCommon() {
-  
   let windowWidth = window.innerWidth;
   window.addEventListener("resize", () => {
     if (window.innerWidth !== windowWidth) {
@@ -71,6 +69,11 @@ function layoutCommon() {
     windowWidth = window.innerWidth;
   });
 
-  window.addEventListener("scroll", () => {
+  window.addEventListener("scroll", () => {});
+
+  let btn_topgo = document.querySelector(".btn_topgo");
+  btn_topgo?.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   });
 }

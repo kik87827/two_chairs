@@ -254,7 +254,7 @@
                 <ul class="mv_out_control_list">
                   <li>
                     <a href="#" class="btn_mv_auto stop"></a>
-                    <a href="#" class="btn_mv_auto play"></a>
+                    <a href="#" class="btn_mv_auto play hidden"></a>
                   </li>
                   <li>
                     <div class="swiper-pagination mv-pagination"></div>
@@ -329,6 +329,7 @@
               init(mv_swiper) {
                 console.log("최초 로드 완료", mv_swiper.realIndex);
                 mv_current_render(mv_swiper.realIndex);
+                autoEvent();
               },
               slideChangeTransitionStart(mv_swiper) {
                 console.log("슬라이드 전환 완료", mv_swiper.realIndex);
@@ -341,10 +342,10 @@
               prevEl: ".btn_mv_nav.prev",
             },
 
-            /* autoplay: {
+            autoplay: {
               delay: 3000,
               disableOnInteraction: false,
-            }, */
+            },
           });
           function mv_current_render(index) {
             $(".mv_current_render").empty().html(`
@@ -361,6 +362,24 @@
                   </div>
                 </div>
             `);
+          }
+          function autoEvent() {
+            const btn_mv_play = document.querySelector(".btn_mv_auto.play");
+            const btn_mv_stop = document.querySelector(".btn_mv_auto.stop");
+
+            btn_mv_play.addEventListener("click", (e) => {
+              e.preventDefault();
+              mv_swiper.autoplay.start();
+              btn_mv_stop.classList.remove("hidden");
+              e.currentTarget.classList.add("hidden");
+            });
+
+            btn_mv_stop.addEventListener("click", (e) => {
+              e.preventDefault();
+              mv_swiper.autoplay.stop();
+              btn_mv_play.classList.remove("hidden");
+              e.currentTarget.classList.add("hidden");
+            });
           }
         }
       </script>
