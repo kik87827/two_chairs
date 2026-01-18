@@ -995,6 +995,7 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
 /* main */
 .mv_zone {
   position: relative;
+  overflow: hidden;
 }
 
 .btn_mv_nav_wrap {
@@ -1188,6 +1189,7 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
 .flag_unique_obj dt .text_node {
   font-weight: 700;
   position: relative;
+  white-space: nowrap;
 }
 
 .flag_unique_obj dd .text_node {
@@ -1600,5 +1602,49 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   top: 1px;
 }
 
+@media (max-width: 1480px) {
+  .btn_mv_nav_wrap {
+    width: 100%;
+  }
+
+  .btn_mv_nav.prev {
+    left: 20px;
+    transform: translate(0, -50%);
+  }
+
+  .btn_mv_nav.next {
+    right: 20px;
+    transform: translate(0, -50%);
+  }
+
+  .swiper.mv_swiper_container, .swiper-container.mv_swiper_container {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .mv_current_container {
+    left: 0;
+    width: 100%;
+    transform: translateX(0);
+    padding: 24px 30px;
+  }
+
+  .grid_item_list {
+    gap: 25px 15px;
+    margin-right: -15px;
+  }
+
+  .grid_item_list > li {
+    flex: 0 0 calc(20% - 15px);
+  }
+
+  .grid_item_list.type2 > li {
+    flex-basis: calc(33.33333% - 15px);
+  }
+
+  .flag_unique_obj dt .text_node, .flag_unique_obj dd .text_node {
+    font-size: 12px;
+  }
+}
 /* // main */
 /*# sourceMappingURL=style.css.map */
