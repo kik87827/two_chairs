@@ -64,44 +64,46 @@
             </li>
           </ul>
         </div>
-        <div class="prose_wrap hor_scroll_wrap">
-          <ul class="prose_list">
-            <li>
-              <a href="#" class="prose_chip active">
-                <span class="text_node">금액대전체</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="prose_chip">
-                <span class="text_node">300만원</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="prose_chip">
-                <span class="text_node">200만원~</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="prose_chip">
-                <span class="text_node">100만원~</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="prose_chip">
-                <span class="text_node">50만원</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="prose_chip">
-                <span class="text_node">30만원</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="prose_chip">
-                <span class="text_node">10만원</span>
-              </a>
-            </li>
-          </ul>
+        <div class="anchor_global_container">
+          <div class="prose_wrap hor_scroll_wrap anchor_menu_list_wrap">
+            <ul class="prose_list anchor_menu_list">
+              <li>
+                <a href="#total" class="prose_chip prose_total active">
+                  <span class="text_node">금액대전체</span>
+                </a>
+              </li>
+              <li>
+                <a href="#mc_anc_01" class="prose_chip anchor_menu">
+                  <span class="text_node">300만원</span>
+                </a>
+              </li>
+              <li>
+                <a href="#mc_anc_02" class="prose_chip anchor_menu">
+                  <span class="text_node">200만원~</span>
+                </a>
+              </li>
+              <li>
+                <a href="#mc_anc_03" class="prose_chip anchor_menu">
+                  <span class="text_node">100만원~</span>
+                </a>
+              </li>
+              <li>
+                <a href="#mc_anc_04" class="prose_chip anchor_menu">
+                  <span class="text_node">50만원</span>
+                </a>
+              </li>
+              <li>
+                <a href="#mc_anc_05" class="prose_chip anchor_menu">
+                  <span class="text_node">30만원</span>
+                </a>
+              </li>
+              <li>
+                <a href="#mc_anc_06" class="prose_chip anchor_menu">
+                  <span class="text_node">10만원</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="mv_zone">
           <div class="mv_swiper_wrap">
@@ -283,6 +285,7 @@
         document.addEventListener("DOMContentLoaded", () => {
           mvSwiper();
           gridControl();
+          stickyAnchorTab();
         });
 
         function mvSwiper() {

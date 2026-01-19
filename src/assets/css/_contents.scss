@@ -30,9 +30,15 @@
     .text_node{font-size:16px;white-space:nowrap; font-weight:500; position:relative; top:-1px; display:inline-block; line-height:1; white-space: nowrap;}
 }
 
-.prose_wrap{border-top:1px solid #ddd;}
+.prose_wrap{border-top:1px solid #ddd;position:sticky;top:0;width:100%;background:#fff;
+    &.anchor_menu_list_wrap{
+        &.fixed{position:fixed;top:90px;left:0;width:100%;z-index:10;
+            box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.1);
+        }
+    }
+}
 .prose_list{
-    display:flex; justify-content: center;
+    display:flex; justify-content: center; position:relative;
     > li{
         position:relative;
         &:after{display:block; content:'';width:1px; height:16px; background:#DDDDDD; position:absolute;top:50%;right:0;transform: translateY(-50%);}
@@ -235,7 +241,7 @@
 }
 .mv_title_chip{
     font-size:18px; color:#fff; font-weight:500;
-    &.highlight{font-weight:700;}
+    &.highlight{font-weight:700;white-space: nowrap;}
 }
 .mv_price_row{
     margin-top:8px;
@@ -258,6 +264,7 @@
 .mc_title_else_wrap{
 
 }
+.anchor_global_container{position:relative;}
 .sort_chip_list{
     display:flex; justify-content: flex-end; gap:5px;
     > li{}
@@ -356,6 +363,13 @@
             &.mb_img{display:block;}
         }
     }
+
+    .prose_wrap{
+        &.anchor_menu_list_wrap{
+            &.fixed{top:60px;}
+        }
+    }
+
     //.mv_flag_box,
     .mc_title_else_wrap{display:none;}
     .mv_current_container{position:relative;top:0;left:0;width:auto;}
@@ -368,12 +382,15 @@
     .mv_flag_layer{
          .flag_unique_wrap{min-height:34px;}
          .flag_unique_obj{padding:0 10px; gap:6px;
+            dt{
+                .ico{width:14px;height:14px;flex-basis: 14px;}
+            }
             dt,dd{
-                .text_node{font-size:14px;}
+                .text_node{font-size:13px;}
             }
         }
         .mv_flag_box{padding:0 10px;
-            .text_node{font-size:14px;}
+            .text_node{font-size:13px;}
         }
     }
 
@@ -420,6 +437,36 @@
     .mv_price_item{
          .text_node{font-size:18px;}
          .text_circle_unit{width:16px; height:16px; font-size:11px;flex-basis: 16px;}
+    }
+
+    .mv_title_chip_list{
+        gap:16px;
+        > li{
+            &:after{right:-8px;}
+        }
+    }
+    .grid_sub_node{font-size:10px;margin-bottom:3px;}
+    .price_item_wrap{
+         .text_node{font-size:12px;}
+    }
+    .grid_main_node{font-size:14px;}
+    .price_item_wrap{
+         .text_circle_unit{width:10px;height:10px; font-size:6px;}
+    }
+    .flag_unique_obj{
+        dt{
+            .ico{width:12px;height:12px; flex-basis: 12px;}
+        }
+         dt,dd{
+            .text_node{font-size:10px;}
+         }
+    }
+    .grid_item{
+        .thum_row{
+            .flag_unique_wrap{min-height:24px;
+                .flag_unique_obj{min-height:24px; justify-content: space-between;}
+            }
+        }
     }
 }
 /* // main */

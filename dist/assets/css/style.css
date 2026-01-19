@@ -806,11 +806,26 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
 
 .prose_wrap {
   border-top: 1px solid #ddd;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #fff;
+}
+
+.prose_wrap.anchor_menu_list_wrap.fixed {
+  position: fixed;
+  top: 90px;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.1);
 }
 
 .prose_list {
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .prose_list > li {
@@ -1330,6 +1345,7 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
 
 .mv_title_chip.highlight {
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .mv_price_row {
@@ -1390,6 +1406,10 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   font-size: 24px;
   color: #121111;
   font-weight: 500;
+}
+
+.anchor_global_container {
+  position: relative;
 }
 
 .sort_chip_list {
@@ -1602,6 +1622,10 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
     display: block;
   }
 
+  .prose_wrap.anchor_menu_list_wrap.fixed {
+    top: 60px;
+  }
+
   .mc_title_else_wrap {
     display: none;
   }
@@ -1643,8 +1667,14 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
     gap: 6px;
   }
 
+  .mv_flag_layer .flag_unique_obj dt .ico {
+    width: 14px;
+    height: 14px;
+    flex-basis: 14px;
+  }
+
   .mv_flag_layer .flag_unique_obj dt .text_node, .mv_flag_layer .flag_unique_obj dd .text_node {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .mv_flag_layer .mv_flag_box {
@@ -1652,7 +1682,7 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   }
 
   .mv_flag_layer .mv_flag_box .text_node {
-    font-size: 14px;
+    font-size: 13px;
   }
 
   .mc_zone {
@@ -1742,6 +1772,52 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
     height: 16px;
     font-size: 11px;
     flex-basis: 16px;
+  }
+
+  .mv_title_chip_list {
+    gap: 16px;
+  }
+
+  .mv_title_chip_list > li:after {
+    right: -8px;
+  }
+
+  .grid_sub_node {
+    font-size: 10px;
+    margin-bottom: 3px;
+  }
+
+  .price_item_wrap .text_node {
+    font-size: 12px;
+  }
+
+  .grid_main_node {
+    font-size: 14px;
+  }
+
+  .price_item_wrap .text_circle_unit {
+    width: 10px;
+    height: 10px;
+    font-size: 6px;
+  }
+
+  .flag_unique_obj dt .ico {
+    width: 12px;
+    height: 12px;
+    flex-basis: 12px;
+  }
+
+  .flag_unique_obj dt .text_node, .flag_unique_obj dd .text_node {
+    font-size: 10px;
+  }
+
+  .grid_item .thum_row .flag_unique_wrap {
+    min-height: 24px;
+  }
+
+  .grid_item .thum_row .flag_unique_wrap .flag_unique_obj {
+    min-height: 24px;
+    justify-content: space-between;
   }
 }
 /* // main */
