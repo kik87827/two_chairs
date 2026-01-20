@@ -2628,7 +2628,6 @@ input.form_input.calendar {
 .td_inline_wrap {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
 .brief_data_node {
