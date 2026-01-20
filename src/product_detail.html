@@ -22,7 +22,7 @@
                 <div class="swiper sm_studio_swiper">
                   <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                      <a href="#" class="sm_studio_item"><img src="./assets/images/photo_studio_01.png" alt="" /></a>
+                      <a href="#" class="sm_studio_item active"><img src="./assets/images/photo_studio_01.png" alt="" /></a>
                     </div>
                     <div class="swiper-slide">
                       <a href="#" class="sm_studio_item"><img src="./assets/images/photo_studio_02.png" alt="" /></a>
@@ -112,16 +112,20 @@
               <div class="desc_info_block">
                 <div class="brief_tb_wrap">
                   <div class="brief_tb">
-                    <div class="brief_tr">
+                    <div class="brief_tr vtype2">
                       <div class="brief_th"><span class="brief_keynode">상품옵션</span></div>
                       <div class="brief_td">
                         <div class="combo_select_wrap">
                           <a href="#" class="combo_target"><span class="text_node">피터 34인치</span></a>
                           <div class="combo_option_layer">
                             <ul class="combo_option_list">
+                              <li><a href="#" class="combo_option">피터 34인치</a></li>
                               <li><a href="#" class="combo_option">옵션 2</a></li>
                               <li><a href="#" class="combo_option">옵션 3</a></li>
-                              <li><a href="#" class="combo_option">옵션 4</a></li>
+                              <li><a href="#" class="combo_option">옵션 5</a></li>
+                              <li><a href="#" class="combo_option">옵션 6</a></li>
+                              <li><a href="#" class="combo_option">옵션 7</a></li>
+                              <li><a href="#" class="combo_option">옵션 8</a></li>
                             </ul>
                           </div>
                         </div>
@@ -160,12 +164,12 @@
                         <div class="td_inline_wrap">
                           <div class="td_inline_cols"><span class="brief_data_node">택배배송 / 무료배송</span></div>
                           <div class="td_inline_cols">
-                            <p class="indent_para bullet_etri">월요일/일요일 및 법정공휴일은 지정 불가입니다.</p>
+                            <p class="indent_para bullet_etri warn_theme">월요일/일요일 및 법정공휴일은 지정 불가입니다.</p>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="brief_tr">
+                    <div class="brief_tr vtype2">
                       <div class="brief_th"><span class="brief_keynode">희망수령일</span></div>
                       <div class="brief_td"><input type="text" class="form_input calendar" value="2025.12.25" /></div>
                     </div>
@@ -270,6 +274,49 @@
           </div>
         </div>
       </main>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          studioSlider();
+          comboUI();
+        });
+
+        function studioSlider() {
+          const sm_studio_item = document.querySelectorAll(".sm_studio_item");
+          const big_render_img = document.querySelector(".big_render_img");
+          let sm_studio_item_active = document.querySelector(".sm_studio_item.active");
+          let studio_swiper = new Swiper(".sm_studio_swiper", {
+            slidesPerView: 4,
+            spaceBetween: 10,
+            navigation: {
+              prevEl: ".btn_sm_studio_navi.prev",
+              nextEl: ".btn_sm_studio_navi.next",
+            },
+            on: {
+              init() {
+                console.log("init");
+                studioEvent();
+              },
+            },
+          });
+
+          function studioEvent() {
+            if (sm_studio_item.length) {
+              sm_studio_item.forEach((sm_item) => {
+                sm_item.addEventListener("click", (e) => {
+                  e.preventDefault();
+                  let etarget = e.currentTarget;
+                  if (etarget !== sm_studio_item_active && sm_studio_item_active) {
+                    sm_studio_item_active.classList.remove("active");
+                  }
+                  etarget.classList.add("active");
+                  big_render_img.setAttribute("src", etarget.querySelector("img").getAttribute("src"));
+                  sm_studio_item_active = etarget;
+                });
+              });
+            }
+          }
+        }
+      </script>
       @@include('./include/_footer.html')
     </div>
   </body>

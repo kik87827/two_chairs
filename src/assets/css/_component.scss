@@ -1,36 +1,62 @@
 .indent_bullet_list{
-    > li{}
+    font-size:16px; color:#333333; line-height:1.6;
+    > li{
+        display:flex; gap:5px;
+    }
     .node_em{}
 }
-.indent_bullet{}
+.indent_bullet{flex:0; white-space: nowrap;}
 .indent_liquid{}
 
-.combo_select_wrap{}
-.combo_target{
-    .text_node{}
+.combo_select_wrap{position:relative;
+    &.active{
+        .combo_option_layer{display:block;}
+    }
 }
-.combo_option_layer{}
+.combo_target{
+    display:flex; align-items: center; box-sizing: border-box; min-height:42px; padding:10px 40px 10px 16px; border:1px solid #ddd; background:url("../images/ico_select_16_arrow.svg") no-repeat calc(100% - 13px) 50%;
+    .text_node{display:inline-block; font-size:14px; color:#000;}
+}
+.combo_option_layer{position:absolute;top:calc(100% - 1px);left:0;width:100%;background:#fff;border:1px solid #ddd;box-sizing: border-box;z-index:10; display:none;}
 .combo_option_list{
     > li{
         &:last-of-type{}
     }
 }
-.combo_option{}
-
-.count_control_wrap{}
-.count_control_navi{
-    &.minus{}
-    &.plus{}
+.combo_option{padding:10px 16px;display:block; font-size:14px; color:#000;
+    &:hover{
+        background:rgba(0,0,0,.03);
+    }
 }
-.count_control_fraction{}
+
+.count_control_wrap{display:inline-flex; height:34px; background:#fff;border:1px solid #ddd; box-sizing: border-box;}
+.count_control_navi{
+    flex:0 0 34px; width:34px;border-right:1px solid #ddd; box-sizing: border-box; position:relative;
+    &:before,
+    &:after{display:block;content:'';width:14px;height:0;border-bottom:2px solid #222; position:absolute;top:50%;left:50%; transform: translate(-50%,-50%);}
+    &.minus{}
+    &.plus{border-right:0;
+        &:before{transform: translate(-50%,-50%) rotate(90deg);}
+    }
+}
+.count_control_fraction{flex:0 0 50px; text-align: center; font-size:14px; color:#222222;border-right:1px solid #ddd; display:flex; align-items: center; justify-content: center; text-align: center;}
 
 
 .indent_para{
-    &.bullet_etri{}
+    display:block; position:relative; padding-left:10px; font-size:14px;
+    &.bullet_etri{
+        &:before{display:block;content:'*';position:absolute;top:0;left:0;}
+    }
+}
+.warn_theme{
+    color:#CE2727;
+    *{
+        color:#CE2727;
+    }
 }
 
-input.form_input{
-    &.calendar{}
+input.form_input{border:1px solid #ddd; height:42px; box-sizing: border-box; color:#222; font-size:14px; padding:0 0 0 12px; background:url("../images/ico_calendar_16.png") no-repeat calc(100% - 13px) 50%/16px auto;
+    &.calendar{width:150px;}
 }
 
 .btn_quad_wrap{}
