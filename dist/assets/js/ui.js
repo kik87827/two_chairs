@@ -79,6 +79,54 @@ function layoutCommon() {
       behavior: "smooth"
     });
   });
+
+  totalMenu();
+
+  function totalMenu() {
+    let touchstart = "ontouchstart" in window;
+    let front_body = document.querySelector(".front_body");
+    let btn_header_menu = document.querySelector(".btn_header_menu");
+    let total_info_wrap = document.querySelector(".total_info_wrap");
+    let btn_total_close = document.querySelector(".btn_total_close");
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth <= 760) {
+        if (total_info_wrap.classList.contains("active")) {
+          front_body.classList.add("touchDis");
+        } else {
+          front_body.classList.remove("touchDis");
+        }
+      } else {
+        front_body.classList.remove("touchDis");
+      }
+      console.log(window.innerWidth);
+    });
+    btn_header_menu?.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (total_info_wrap) {
+        total_info_wrap.classList.toggle("active");
+      }
+      if (window.innerWidth <= 760) {
+        front_body.classList.add("touchDis");
+      }
+    });
+    document.addEventListener("click", (e) => {
+      let etarget = e.target;
+      if (!etarget.classList.contains("btn_header_menu") && !etarget.closest(".btn_header_menu") && !etarget.closest(".total_info_wrap")) {
+        total_info_wrap.classList.remove("active");
+        front_body.classList.remove("touchDis");
+      }
+    });
+    btn_total_close?.addEventListener("click", (e) => {
+      e.preventDefault();
+      if (total_info_wrap) {
+        total_info_wrap.classList.remove("active");
+      }
+      if (window.innerWidth <= 760) {
+        front_body.classList.remove("touchDis");
+      }
+    });
+  }
 }
 
 function stickyAnchorTab() {
