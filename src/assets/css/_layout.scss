@@ -139,3 +139,91 @@ html:not(.touchmode){
 @media (hover: none) and (pointer: coarse) {
   /* 터치 전용 스타일 */
 }
+
+
+/* menu */
+.total_info_wrap{}
+.total_info_panel{}
+.total_info_top_row{}
+.total_info_middle_row{}
+.total_info_bottom_row{}
+.profile_chip_wrap{
+    .profile_ico{
+        > img{}
+    }
+    .text_cols{
+        .proflie_who_para{}
+    }
+}
+.proflie_who_para{
+    .em{}
+}
+.total_top_else_wrap{
+    .btn_role_box_wrap{}
+    .btn_role_box{}
+}
+.btn_total_close{
+    &:before,
+    &:after{}
+}
+.total_mcont_block{
+    &:last-of-type{}
+}
+.facts_tb_wrap{}
+.facts_tb{}
+.facts_tr{
+    &:last-of-type{}
+}
+.facts_th,.facts_td{}
+.facts_th{}
+.facts_td{}
+.facts_keynode{}
+.cell_inline_list{
+    > li{}
+}
+.cell_note_para{}
+.level_dom_wrap{}
+.level_dom_ico{}
+.level_dom_text{}
+
+.facts_td_block{
+    &:last-of-type{}
+}
+.number_subset{
+    &.highlight{}
+}
+.number_set_dom{}
+.number_set_unit{
+    &.shape{}
+}
+.facts_text_data{}
+.facts_text_slice{}
+.number_set_unit{
+    &.shape_circle{}
+}
+.total_route_wrap{}
+.total_route_list{
+    > li{
+        &:after{}
+        &:nth-of-type(2n){
+            &:after{}
+        }
+    }
+}
+.total_route{
+  .ico{
+    &.shape_app{}
+    &.shape_point{}
+    &.shape_center{}
+    &.shape_list{}
+  }
+  .text_node{}
+}
+
+.logo_route_item{
+    img.logo_img{}
+    .ico{
+        &.link_type{}
+    }
+}
+.route_text_node{}

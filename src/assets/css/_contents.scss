@@ -1,3 +1,6 @@
+
+
+/* main */
 .hor_scroll_wrap{
     overflow:hidden; overflow-x:auto; position:relative;
     &::-webkit-scrollbar{display:none;width:0;}
@@ -82,7 +85,6 @@
 
 
 
-/* main */
 .mv_zone{position:relative;overflow:hidden;}
 .btn_mv_nav_wrap{position:absolute;top:50%;left:50%;transform: translateX(-50%);height:0; width:1400px; z-index:5;}
 .btn_mv_nav{
@@ -469,4 +471,158 @@
         }
     }
 }
-/* // main */
+
+
+/* sub page */
+.breadcrumb_wrap{}
+.breadcrumb_list{
+    > li{}
+}
+.breadcrumb_ico_item{
+    &.home{}
+}
+.breadcrumb_item{
+    &.highlight{}
+}
+.detail_template{}
+.detail_img_cols{}
+.detail_spec_cols{}
+
+.photo_studio_container{}
+.big_studio_render{
+
+}
+.big_render_img{}
+.sm_studio_render{}
+.btn_sm_studio_navi{
+    &.prev{}
+    &.next{}
+}
+.swiper{
+    &.sm_studio_swiper{
+        .swiper-wrapper{}
+        .swiper-slide{}
+    }
+}
+.sm_studio_item{
+    > img{}
+}
+
+.desc_info_wrap{}
+.desc_info_block{
+    &:last-of-type{}
+}
+.desc_flag_row{
+    .flag_unique_wrap{}
+    .mv_flag_box{}
+}
+.desc_pro_name_row{}
+.pro_name_keyword{}
+.pro_name_primary{}
+.brief_tb_wrap{}
+.brief_tb{}
+.brief_tr{}
+.brief_th,
+.brief_td{}
+.brief_th{}
+.brief_td{
+    .indent_bullet_list{}
+    .form_input{}
+}
+.brief_keynode{}
+.node_em{
+    &.dark{}
+    &.orange{}
+}
+
+
+
+
+.td_inline_wrap{}
+.td_inline_cols{
+    .indent_para{}
+}
+.brief_data_node{}
+
+
+
+
+.pro_opt_box_wrap{}
+.pro_opt_box{}
+.pro_opt_name_row{}
+.pro_opt_name{}
+.btn_pro_opt_close{}
+.pro_opt_contents{
+    .count_control_wrap{}
+    .opt_price_render{}
+}
+
+
+
+.opt_price_render{}
+.number_info_package{
+    &.highlight{
+        .number_info_node{}
+        .number_info_unit{}
+    }
+}
+.number_info_node{}
+.number_info_unit{}
+
+
+.crux_obj_container{}
+.crux_key_cols{}
+.crux_keynode{}
+.crux_value_cols{}
+.crux_set_chip_list{
+    > li{
+
+    }
+    .number_info_package{}
+}
+.crux_set_chip{}
+
+.desc_control_wrap{
+    &.btn_quad_wrap{}
+}
+
+.split_tab_container{}
+.split_tab_inner{}
+.split_tab_list{
+    > li{}
+}
+.split_tab{}
+
+
+.entry_both_wrap{}
+.entry_img_cols{}
+.entry_img_render{
+    img{}
+}
+img.entry_render_img{}
+
+.entry_more_control{}
+.btn_role_box{
+    .text_node{}
+    .ico{
+        &.shape_arrow_down{}
+    }
+}
+
+.entry_info_cols{}
+
+.entry_overview_box{
+    .crux_obj_container{}
+}
+.entry_over_wrap{}
+.entry_over_row{
+    .pro_name_keyword{}
+    .pro_name_primary{}
+    &:last-of-type{}
+    .pro_opt_box{}
+}
+.entry_control_wrap{
+    &.btn_quad_wrap{
+
+    }
+}

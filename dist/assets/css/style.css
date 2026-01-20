@@ -719,7 +719,8 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
 @media (hover: none) and (pointer: coarse) {
   /* 터치 전용 스타일 */;
 }
-
+/* menu */
+/* main */
 .hor_scroll_wrap {
   overflow: hidden;
   overflow-x: auto;
@@ -944,7 +945,7 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
     min-height: 51px;
   }
 }
-/* main */
+
 .mv_zone {
   position: relative;
   overflow: hidden;
@@ -1820,5 +1821,5 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
     justify-content: space-between;
   }
 }
-/* // main */
+/* sub page */
 /*# sourceMappingURL=style.css.map */
