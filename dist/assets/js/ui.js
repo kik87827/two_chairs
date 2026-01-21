@@ -81,6 +81,7 @@ function layoutCommon() {
   });
 
   totalMenu();
+  topgoLayer();
 
   function totalMenu() {
     let touchstart = "ontouchstart" in window;
@@ -99,7 +100,6 @@ function layoutCommon() {
       } else {
         front_body.classList.remove("touchDis");
       }
-      console.log(window.innerWidth);
     });
     btn_header_menu?.addEventListener("click", (e) => {
       e.preventDefault();
@@ -126,6 +126,22 @@ function layoutCommon() {
         front_body.classList.remove("touchDis");
       }
     });
+  }
+
+  function topgoLayer() {
+    const btn_topgo_wrap = document.querySelector(".btn_topgo_wrap");
+    const mb_bottom_layer = document.querySelector(".mb_bottom_layer");
+
+    action();
+    window.addEventListener("resize", () => {
+      action();
+    });
+
+    function action() {
+      if (btn_topgo_wrap && mb_bottom_layer) {
+        btn_topgo_wrap.style.bottom = mb_bottom_layer.getBoundingClientRect().height + "px";
+      }
+    }
   }
 }
 

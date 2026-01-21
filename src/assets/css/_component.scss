@@ -59,14 +59,39 @@ input.form_input{border:1px solid #ddd; height:42px; box-sizing: border-box; col
     &.calendar{width:150px;}
 }
 
-.btn_quad_wrap{}
+.btn_quad_wrap{display:flex; gap:24px;}
 .btn_quad{
-    &.big{}
-    &.primary{
-        .text_node{}
+    flex:1; text-align: center; box-sizing: border-box; display:flex; align-items: center; justify-content: center; min-height:50px; border:1px solid #2D1F13; padding:10px 20px;
+    &.big{min-height:70px;
+        .text_node{ font-size:20px; font-weight:600;}
     }
-    .text_node{}
+    &.primary{
+        background:#2D1F13;
+        .text_node{color:#fff;}
+    }
+    .text_node{display:inline-block; font-size:16px; font-weight:500;}
 }
 
 .btn_role_box_wrap{}
-.btn_role_box{display:inline-flex; background:#fff; font-size:12px; min-width:80px; text-align: center; align-items: center; justify-content: center; min-height:32px; box-sizing: border-box; border:1px solid #2D1F13;}
+.btn_role_box{display:inline-flex; gap:8px; background:#fff; font-size:12px; min-width:80px; text-align: center; align-items: center; justify-content: center; min-height:32px; box-sizing: border-box; border:1px solid #2D1F13;
+    &.size2{
+        min-height:40px;
+    }
+    .text_node{font-size:14px; color:#2D1F13;}
+    .ico{
+        width:16px; height:16px; flex:0 0 16px; @include bgicon;
+        &.shape_arrow_down{background-image:url("../images/ico_more_arrow_16.svg"); position:relative;top:1px;}
+    }
+}
+
+@media (max-width:767px){
+    .indent_bullet_list{
+        font-size:14px;
+    }
+    .combo_target{
+        min-height:40px; background-position: calc(100% - 10px) 50%;
+         .text_node{font-size:12px;}
+    }
+    .combo_option{font-size:12px;}
+
+}

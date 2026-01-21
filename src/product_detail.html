@@ -212,8 +212,9 @@
           <div class="entry_img_cols">
             <div class="entry_img_render">
               <img src="./assets/images/entry_sample_img.jpg" class="entry_render_img" alt="" />
+              <img src="./assets/images/entry_sample_img.jpg" class="entry_render_img" alt="" />
               <div class="entry_more_control">
-                <a href="#" class="btn_role_box">
+                <a href="#" class="btn_role_box size2" id="btn_entry_fold">
                   <span class="text_node">상세정보 펼쳐보기</span>
                   <i class="ico shape_arrow_down"></i>
                 </a>
@@ -273,11 +274,18 @@
             </div>
           </div>
         </div>
+        <!-- mobile btn submit -->
+        <div class="mb_bottom_layer btn_quad_wrap">
+          <a href="#" class="btn_quad"><span class="text_node">장바구니</span></a>
+          <a href="#" class="btn_quad primary"><span class="text_node">바로 신청</span></a>
+        </div>
+        <!-- // mobile btn submit -->
       </main>
       <script>
         document.addEventListener("DOMContentLoaded", () => {
           studioSlider();
           comboUI();
+          entryDetail();
         });
 
         datePicker();
@@ -317,6 +325,22 @@
               });
             }
           }
+        }
+
+        function entryDetail() {
+          const entry_img_render = document.querySelector(".entry_img_render");
+          const btn_entry_fold = document.querySelector("#btn_entry_fold");
+          const btn_entry_fold_node = btn_entry_fold?.querySelector(".text_node");
+
+          btn_entry_fold?.addEventListener("click", (e) => {
+            e.preventDefault();
+            entry_img_render.classList.toggle("open");
+            if (entry_img_render.classList.contains("open")) {
+              btn_entry_fold_node.textContent = "상세정보 접기";
+            } else {
+              btn_entry_fold_node.textContent = "상세정보 펼쳐보기";
+            }
+          });
         }
       </script>
       @@include('./include/_footer.html')
