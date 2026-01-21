@@ -447,9 +447,12 @@ function datePicker() {
   $(function () {
     $(".form_input.calendar").datepicker({
       dateFormat: "yy.mm.dd", // 날짜 형식
-      showButtonPanel: true, // 오늘/완료 버튼 표시
-      showMonthAfterYear: true,
-      yearSuffix: "년",
+      /* showButtonPanel: true, // 오늘/완료 버튼 표시
+      showMonthAfterYear: true, */
+      changeMonth: true, // 월 선택 드롭다운
+      changeYear: true, // 년 선택 드롭다운
+      yearRange: "1950:2100", // 선택 가능한 년 범위 (필요에 따라 조정)
+      //yearSuffix: "년",
       closeText: "닫기",
       prevText: "이전달",
       nextText: "다음달",
@@ -469,6 +472,14 @@ function datePicker() {
             wiEdateType[i].checked = false;
           }
         }
+      },
+      beforeShow: function (input) {
+        setTimeout(() => {
+          input.blur(); // 달력 열릴 때 포커스 제거
+        }, 0);
+      },
+      onClose: function () {
+        document.activeElement.blur(); // 달력 조작 후에도 포커스 제거
       },
     });
   });
