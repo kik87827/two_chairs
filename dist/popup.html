@@ -136,130 +136,41 @@
 		</header>
 
 		<main class="middle_wrap">
-			<div class="breadcrumb_wrap">
-				<ul class="breadcrumb_list">
-					<li><a href="#" class="breadcrumb_ico_item home"></a></li>
-					<li><a href="#" class="breadcrumb_item highlight">장바구니</a></li>
-				</ul>
+			<div>
+				<a href="#" class="btn_guide_box" id="btnCall">팝업1 호출</a>
+				<!-- <a href="#" class="btn_guide_box" id="btnInstanceTest">팝업1 닫기 콜백 호출</a> -->
+				<a href="#" class="btn_guide_box" id="btnCall2">팝업 2 호출</a>
+				<!-- <a href="#" class="btn_guide_box" id="btnInstanceTest3">팝업2 닫기 콜백 호출</a> -->
 			</div>
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
 		</main>
 		<!-- popup -->
-		<div class="popup_wrap" id="product_check_popup">
+		<div class="popup_wrap" id="samplePopup">
+			<div class="bg_dim"></div>
+			<div class="popup_box_tb_wrap">
+				<div class="popup_box_tb">
+					<div class="popup_box_td">
+						<div class="popup_box_container">
+							<div class="popup_sections_wrap">
+								<p class="popup_sec_main_copy">
+									<em class="color_em">종료 임박</em>
+									상품입니다.
+								</p>
+								<p class="popup_sec_sub_copy">
+									사용기한이 지나면
+									<br />
+									상품을 더 이상 신청할 수 없어요
+								</p>
+							</div>
+							<div class="popup_btn_wrap btn_quad_wrap">
+								<a href="#" class="btn_quad primary size2 close_trigger"><span class="text_node">확인</span></a>
+							</div>
+							<a href="javascript:;" class="btn_popup_close"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="popup_wrap" id="samplePopup2">
 			<div class="bg_dim"></div>
 			<div class="popup_box_tb_wrap">
 				<div class="popup_box_tb">
@@ -291,19 +202,51 @@
 		<script>
 			document.addEventListener("DOMContentLoaded", function() {
 				// 인스턴스 선언
-				let product_check_popup = new DesignPopup({
-					selector: "#product_check_popup",
+				let designPopup = new DesignPopup({
+					selector: "#samplePopup",
 					beforeCallback() {},
 					callback() {},
 					closeCallback() {},
 				});
-				// 퍼블확인용
-				let url = window.location.href.split("?")[1];
-				let url_2 = url !== undefined ? url.split("#")[0] : null;
-				if (url_2 === "popup") {
-					product_check_popup.popupShow(); // show
-					// designPopup2.popupShow(); // hide
-				}
+				// designPopup.popupShow(); // show
+				// designPopup.popupShow(); // hide
+
+				let designPopup2 = new DesignPopup({
+					selector: "#samplePopup2",
+					beforeCallback() {},
+					callback() {},
+					closeCallback() {},
+				});
+				designPopup2.popupShow(); // show
+				// designPopup2.popupShow(); // hide
+
+				// event
+				document.querySelector("#btnCall").addEventListener("click", () => {
+					designPopup.popupShow(); // show
+				});
+				document.querySelector("#btnCall2").addEventListener("click", () => {
+					designPopup2.popupShow(); // show
+				});
+				document.querySelector("#btnInstanceTest").addEventListener("click", () => {
+					designPopup.popupHide({
+						beforeClose() {
+							console.log("samplePopup instance - beforeClose");
+						},
+						closeCallback() {
+							console.log("samplePopup instance - closeCallback");
+						},
+					});
+				});
+				document.querySelector("#btnInstanceTest2").addEventListener("click", () => {
+					designPopup2.popupHide({
+						beforeClose() {
+							console.log("samplePopup instance 2 - beforeClose");
+						},
+						closeCallback() {
+							console.log("samplePopup instance 2 - closeCallback");
+						},
+					});
+				});
 			});
 		</script>
 		<div class="btn_topgo_wrap">

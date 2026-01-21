@@ -136,176 +136,41 @@
 		</header>
 
 		<main class="middle_wrap">
-			<div class="breadcrumb_wrap">
-				<ul class="breadcrumb_list">
-					<li><a href="#" class="breadcrumb_ico_item home"></a></li>
-					<li><a href="#" class="breadcrumb_item highlight">장바구니</a></li>
-				</ul>
+			<div>
+				<a href="#" class="btn_guide_box" id="btnCall">모달 호출(alert)</a>
+				<a href="#" class="btn_guide_box" id="btnCall2">모달 호출(confirm)</a>
 			</div>
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-			<br />
-			내용이 들어갑니다.
-		</main>
-		<!-- popup -->
-		<div class="popup_wrap" id="product_check_popup">
-			<div class="bg_dim"></div>
-			<div class="popup_box_tb_wrap">
-				<div class="popup_box_tb">
-					<div class="popup_box_td">
-						<div class="popup_box_container theme_2">
-							<div class="popup_title_bar">
-								<h2 class="popup_title">신청확인</h2>
-							</div>
-							<div class="popup_shell_wrap">
-								<div class="popup_shell_message_wrap">
-									<p class="popup_shell_main_message">
-										선택한 3개의 상품을
-										<br />
-										신청 하시겠어요?
-									</p>
-								</div>
-								<div class="popup_shell_btn_wrap btn_quad_wrap">
-									<a href="#" class="btn_quad size2 close_trigger"><span class="text_node">신청취소</span></a>
-									<a href="#" class="btn_quad size2 primary close_trigger"><span class="text_node">신청하기</span></a>
-								</div>
-							</div>
-							<a href="javascript:;" class="btn_popup_close"></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- // popup -->
-		<script>
-			document.addEventListener("DOMContentLoaded", function() {
-				// 인스턴스 선언
-				let product_check_popup = new DesignPopup({
-					selector: "#product_check_popup",
-					beforeCallback() {},
-					callback() {},
-					closeCallback() {},
+
+			<script>
+				document.addEventListener("DOMContentLoaded", function() {
+					// event
+					document.querySelector("#btnCall").addEventListener("click", () => {
+						designModal({
+							message: "<em>종료 임박</em> 상품입니다.",
+							modaltype: "alert",
+							okcallback() {
+								console.log("okcallback");
+							},
+							cancelcallback() {
+								console.log("cancelcallback");
+							},
+						});
+					});
+					document.querySelector("#btnCall2").addEventListener("click", () => {
+						designModal({
+							message: "<em>종료 임박</em> 상품입니다.",
+							modaltype: "confirm",
+							okcallback() {
+								console.log("okcallback");
+							},
+							cancelcallback() {
+								console.log("cancelcallback");
+							},
+						});
+					});
 				});
-				// 퍼블확인용
-				let url = window.location.href.split("?")[1];
-				let url_2 = url !== undefined ? url.split("#")[0] : null;
-				if (url_2 === "popup") {
-					product_check_popup.popupShow(); // show
-					// designPopup2.popupShow(); // hide
-				}
-			});
-		</script>
+			</script>
+		</main>
 		<div class="btn_topgo_wrap">
 			<div class="btn_topgo_inner">
 				<a href="#" class="btn_topgo">

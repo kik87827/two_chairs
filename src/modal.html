@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+  @@include('./include/_head.html')
+
+  <body class="front_body">
+    <div class="page_wrap">
+      @@include('./include/_header.html')
+      <main class="middle_wrap">
+        <div>
+          <a href="#" class="btn_guide_box" id="btnCall">모달 호출(alert)</a>
+          <a href="#" class="btn_guide_box" id="btnCall2">모달 호출(confirm)</a>
+        </div>
+
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            // event
+            document.querySelector("#btnCall").addEventListener("click", () => {
+              designModal({
+                message: "<em>종료 임박</em> 상품입니다.",
+                modaltype: "alert",
+                okcallback() {
+                  console.log("okcallback");
+                },
+                cancelcallback() {
+                  console.log("cancelcallback");
+                },
+              });
+            });
+            document.querySelector("#btnCall2").addEventListener("click", () => {
+              designModal({
+                message: "<em>종료 임박</em> 상품입니다.",
+                modaltype: "confirm",
+                okcallback() {
+                  console.log("okcallback");
+                },
+                cancelcallback() {
+                  console.log("cancelcallback");
+                },
+              });
+            });
+          });
+        </script>
+      </main>
+      @@include('./include/_footer.html')
+    </div>
+  </body>
+</html>

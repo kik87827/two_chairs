@@ -411,11 +411,54 @@
 			</div>
 			<!-- // mobile btn submit -->
 		</main>
+		<!-- popup -->
+		<div class="popup_wrap" id="message_popup">
+			<div class="bg_dim"></div>
+			<div class="popup_box_tb_wrap">
+				<div class="popup_box_tb">
+					<div class="popup_box_td">
+						<div class="popup_box_container">
+							<div class="popup_sections_wrap">
+								<p class="popup_sec_main_copy">
+									<em class="color_em">종료 임박</em>
+									상품입니다.
+								</p>
+								<p class="popup_sec_sub_copy">
+									사용기한이 지나면
+									<br />
+									상품을 더 이상 신청할 수 없어요
+								</p>
+							</div>
+							<div class="popup_btn_wrap btn_quad_wrap">
+								<a href="#" class="btn_quad primary size2 close_trigger"><span class="text_node">확인</span></a>
+							</div>
+							<a href="javascript:;" class="btn_popup_close"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // popup -->
 		<script>
 			document.addEventListener("DOMContentLoaded", () => {
 				studioSlider();
 				comboUI();
 				entryDetail();
+
+				// 인스턴스 선언
+				let message_popup = new DesignPopup({
+					selector: "#message_popup",
+					beforeCallback() {},
+					callback() {},
+					closeCallback() {},
+				});
+
+				// 퍼블확인용
+				let url = window.location.href.split("?")[1];
+				let url_2 = url !== undefined ? url.split("#")[0] : null;
+				if (url_2 === "popup") {
+					message_popup.popupShow(); // show
+				}
 			});
 
 			datePicker();
