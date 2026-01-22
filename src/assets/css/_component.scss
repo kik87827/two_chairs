@@ -87,6 +87,27 @@ input.form_input{border:1px solid #ddd; height:42px; box-sizing: border-box; col
     }
 }
 
+.props_item{}
+.props_dom{
+    &:checked{
+        & + .props_label{}
+    }
+}
+.props_label{}
+
+.btn_task_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.btn_task_box{
+    &.line_active{}
+}
+
+.btn_toggle_ico{
+    &.active{}
+}
+
 @media (max-width:767px){
     .indent_bullet_list{
         font-size:14px;
@@ -164,6 +185,8 @@ input.form_input{border:1px solid #ddd; height:42px; box-sizing: border-box; col
 }
 
 .popup_shell_main_message{text-align: center; font-size:14px; color:#1A1A1A; font-weight:500;}
+
+
 
 @media (max-width:1023px){
     .popup_item{
