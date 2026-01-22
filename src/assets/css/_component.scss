@@ -87,21 +87,25 @@ input.form_input{border:1px solid #ddd; height:42px; box-sizing: border-box; col
     }
 }
 
-.props_item{}
+.props_item{display:inline-flex; gap:10px;}
 .props_dom{
+    appearance: none; cursor: pointer; display:inline-block; @include bgicon; background-image:url("../images/ico_checkbox.png"); width:18px;height:18px; border:1px solid #ddd; box-sizing: content-box;
     &:checked{
+        background-color:#DD8560; background-position:0 100%;border-color:#DD8560;
         & + .props_label{}
     }
 }
-.props_label{}
+.props_label{ cursor: pointer; display:inline-block; font-size:14px; font-weight:500; line-height:1.2; padding-top:1px;}
 
 .btn_task_list{
+    display:flex; align-items: center; gap:16px;
     > li{
         &:last-of-type{}
     }
 }
 .btn_task_box{
-    &.line_active{}
+    display:inline-block; padding:6px 10px; color:#222222; min-height:32px; box-sizing: border-box; border:1px solid #333;
+    &.line_active{border-color:#DD8560; color:#DD8560;}
 }
 
 .btn_toggle_ico{

@@ -42,6 +42,7 @@ html:not(.touchmode){
     .ico{width:24px;height:24px;background:url("../images/ico_topgo.svg") no-repeat 0 0/100% auto;}
     .text_node{font-size:12px; display:block;color:#666;font-weight: 500; }
 }
+.check_topgo{height:1px; pointer-events: none;}
 
 .footer_wrap{background:#EDEDED;}
 .footer_inner{max-width:1400px; margin:0 auto; padding:24px 30px 32px; position:relative;}

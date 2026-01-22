@@ -129,16 +129,49 @@ function layoutCommon() {
     const btn_topgo_wrap = document.querySelector(".btn_topgo_wrap");
     const mb_bottom_layer = document.querySelector(".mb_bottom_layer");
 
-    action();
-    window.addEventListener("resize", () => {
-      action();
-    });
+    if (!btn_topgo_wrap || !mb_bottom_layer) return;
 
-    function action() {
-      if (btn_topgo_wrap && mb_bottom_layer) {
-        btn_topgo_wrap.style.bottom = mb_bottom_layer.getBoundingClientRect().height + "px";
-      }
+    // 🔹 check_topgo 동적 생성
+    let check_topgo = btn_topgo_wrap.previousElementSibling;
+
+    if (!check_topgo || !check_topgo.classList.contains("check_topgo")) {
+      check_topgo = document.createElement("div");
+      check_topgo.className = "check_topgo";
+      btn_topgo_wrap.parentNode.insertBefore(check_topgo, btn_topgo_wrap);
     }
+
+    function setBottom() {
+      btn_topgo_wrap.style.bottom = mb_bottom_layer.getBoundingClientRect().height + "px";
+    }
+
+    function resetBottom() {
+      btn_topgo_wrap.style.bottom = "";
+    }
+
+    // 🔍 sticky 상태 감시
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) {
+          // ✅ sticky 상태
+          btn_topgo_wrap.classList.add("is-stuck");
+          setBottom();
+        } else {
+          // ❌ 일반 상태
+          btn_topgo_wrap.classList.remove("is-stuck");
+          resetBottom();
+        }
+      },
+      { threshold: 0 }
+    );
+
+    observer.observe(check_topgo);
+
+    // 🔁 sticky 상태일 때만 resize 반영
+    window.addEventListener("resize", () => {
+      if (btn_topgo_wrap.classList.contains("is-stuck")) {
+        setBottom();
+      }
+    });
   }
 }
 
