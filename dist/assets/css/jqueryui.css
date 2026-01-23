@@ -610,9 +610,9 @@
 ----------------------------------*/
 
 .ui-datepicker-week-end{
-	*:not(.ui-state-highlight,.ui-priority-secondary){color:#AF0101 !important;}
+	*:not(.ui-state-highlight,.ui-priority-secondary,.ui-state-active){color:#AF0101 !important;}
 	&:last-of-type{
-		*:not(.ui-state-highlight,.ui-priority-secondary){color:#0258AD !important;}
+		*:not(.ui-state-highlight,.ui-priority-secondary,.ui-state-active){color:#0258AD !important;}
 	}
 }
 
