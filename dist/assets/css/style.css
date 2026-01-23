@@ -387,7 +387,7 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 30;
 }
 
 .header_inner {
@@ -1447,6 +1447,13 @@ input.form_input.calendar {
   .combo_option {
     font-size: 12px;
   }
+
+  .btn_task_box {
+    min-height: 0;
+    font-size: 10px;
+    padding: 7px 10px;
+    line-height: 1;
+  }
 }
 /* popup */
 .btn_guide_box {
@@ -1534,7 +1541,7 @@ input.form_input.calendar {
 .popup_item {
   box-sizing: border-box;
   z-index: 20;
-  max-width: 900px;
+  max-width: 500px;
   margin: 50px auto;
   max-height: calc(100% - 100px);
   background: #fff;
@@ -1544,16 +1551,11 @@ input.form_input.calendar {
   width: 100%;
   opacity: 0;
   transition: 0.4s;
-  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.12);
-  border-radius: 24px;
 }
 
 .popup_title_row {
-  padding: 32px 80px 20px 36px;
-}
-
-.popup_title {
- /*  @include font(20px, 500, 1.4, 0, #000); */;
+  border-bottom: 1px solid #DDDDDD;
+  padding: 18px 56px 17px 24px;
 }
 
 .popup_contents_row {
@@ -1563,7 +1565,6 @@ input.form_input.calendar {
   flex: 1;
   font-size: 16px;
   color: #333333;
-  padding: 0 40px 10px;
 }
 
 .popup_contents_row + .popup_btn_row {
@@ -1645,7 +1646,7 @@ input.form_input.calendar {
 }
 
 .popup_shell_wrap {
-  padding: 24px 35px;
+  padding: 24px 24px;
 }
 
 .popup_shell_btn_wrap {
@@ -1663,11 +1664,30 @@ input.form_input.calendar {
   font-weight: 500;
 }
 
+.popup_shell_main_message.size_up {
+  font-size: 16px;
+}
+
+.popup_shell_sub_wrap {
+  margin-top: 16px;
+}
+
+.popup_shell_sub_message {
+  font-size: 14px;
+  color: #1a1a1a;
+  line-height: 1.4;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.popup_shell_sub_message:last-of-type {
+  margin-bottom: 0;
+}
+
 @media (max-width: 1023px) {
   .popup_item {
     margin: 50px;
     max-height: calc(100% - 100px);
-    border-radius: 14px;
   }
 
   .popup_contents_row + .popup_btn_row {
@@ -1678,21 +1698,12 @@ input.form_input.calendar {
 @media (max-width: 767px) {
   .popup_item {
     max-width: 100%;
-    margin: 15px;
-    max-height: calc(100% - 30px);
-  }
-
-  .popup_title_row {
-    padding: 15px 60px 15px 20px;
-  }
-
-  .popup_title {
-    font-size: 16px !important;
+    margin: 16px;
+    max-height: calc(100% - 32px);
   }
 
   .popup_contents_row {
     font-size: 14px;
-    padding: 10px 20px 30px;
   }
 
   .btn_popup_close {
@@ -3714,6 +3725,7 @@ input.form_input.calendar {
 
   .mb_bottom_layer.ds_type2 {
     display: block;
+    padding: 24px 16px;
   }
 }
 /* cart */
@@ -3797,11 +3809,7 @@ input.form_input.calendar {
 .product_summary_container .summary_spec_copy {
   font-size: 14px;
   color: #222;
-  word-break: break-all;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
+ /*  @include clamp(3); */
   line-height: 1.6;
 }
 
@@ -3861,6 +3869,7 @@ input.form_input.calendar {
 
 .board_data_key {
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .board_cell_block {
@@ -3951,6 +3960,7 @@ input.form_input.calendar {
   font-size: 14px;
   color: #222;
   line-height: 1;
+  white-space: nowrap;
 }
 
 .equation_ico {
@@ -4008,6 +4018,7 @@ input.form_input.calendar {
   display: inline-block;
   line-height: 1;
   color: #2D1F13;
+  white-space: nowrap;
 }
 
 .board_pay_cols {
@@ -4061,7 +4072,7 @@ input.form_input.calendar {
 }
 
 .report_chip_obj:last-of-type {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 .report_chip_obj dd .number_text_package {
@@ -4101,8 +4112,47 @@ input.form_input.calendar {
   line-height: 1;
 }
 
-.report_mb_info_wrap {
+.report_mb_info_zone {
   display: none;
+  margin-bottom: 24px;
+}
+
+.report_mb_info_zone.active {
+  display: block;
+}
+
+.report_mb_info_block {
+  background: #f8f8f8;
+  margin-bottom: 10px;
+  padding: 20px 16px;
+}
+
+.report_mb_info_block:last-of-type {
+  margin-bottom: 0;
+}
+
+.report_mb_info_block .report_chip_obj {
+  margin-bottom: 12px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.report_mb_info_block .report_chip_obj dt .report_key_node {
+  font-size: 14px;
+}
+
+.report_mb_info_block .report_chip_obj dd .number_text_package {
+  font-size: 16px;
+}
+
+.report_mb_info_block .report_chip_obj.has_line {
+  border-top: 1px solid #ddd;
+  padding: 13px 8px 0;
+  margin-top: 18px;
+}
+
+.report_mb_info_block .report_chip_obj.has_line dd .number_text_package {
+  color: #999;
 }
 
 .report_mb_container + .btn_quad_wrap {
@@ -4151,9 +4201,12 @@ input.form_input.calendar {
     flex-basis: 40px;
   }
 
-  .equation_container,
-.equation_chip_cols {
-    gap: 15px;
+  .equation_container {
+    gap: 16px;
+  }
+
+  .equation_chip_cols {
+    gap: 10px;
   }
 
   .product_summary_container .props_cell {
@@ -4174,15 +4227,142 @@ input.form_input.calendar {
     width: 100%;
   }
 
-  .equation_chip_cols,
-.equation_container {
+  .equation_container {
     flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .board_footer_wrap {
+    padding: 20px;
   }
 }
 
 @media (max-width: 767px) {
   .board_pay_cols {
     display: none;
+  }
+
+  .page_title_row {
+    margin: 40px 16px 24px 16px;
+    flex-direction: column;
+    gap: 32px;
+    border-color: #ddd;
+  }
+
+  .page_title {
+    font-size: 28px;
+  }
+
+  .bc_sub_cols {
+    display: none;
+  }
+
+  .board_data_container {
+    padding: 0 16px;
+  }
+
+  .respon_board_tr {
+    padding: 24px 16px 0;
+    gap: 0;
+  }
+
+  .sub_cell_group {
+    display: block;
+    border-top: 1px solid #ddd;
+    padding: 16px 36px;
+    margin-top: 24px;
+    box-sizing: border-box;
+  }
+
+  .sub_cell_list {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .sub_cell_list > li {
+    flex-basis: 0;
+  }
+
+  .sub_cell_list > li.cell_short {
+    flex-basis: 0;
+  }
+
+  .sub_cell_list .number_text_package {
+    font-size: 14px;
+  }
+
+  .board_data_obj {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .board_cell_container {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+  }
+
+  .board_cell_container .board_cell_block {
+    margin: 0;
+  }
+
+  .board_list_node {
+    font-size: 12px;
+  }
+
+  .summary_spec_copy .keyword {
+    display: block;
+  }
+
+  .board_footer_wrap {
+    padding: 25px;
+  }
+
+  .equation_obj dt.mb_hidden {
+    display: none;
+  }
+
+  .equation_chip_cols {
+    gap: 7px;
+  }
+
+  .equation_chip_cols:first-of-type {
+    gap: 16px;
+  }
+
+  .equation_value_node {
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .report_value_node {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 370px) {
+  .equation_chip_cols {
+    gap: 7px;
+  }
+
+  .equation_chip_cols:first-of-type {
+    gap: 7px;
+  }
+}
+
+@media (max-width: 359px) {
+  .equation_container,
+.equation_obj,
+.equation_chip_cols {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (orientation: landscape) {
+  .mb_bottom_layer {
+    position: static;
   }
 }
 /*# sourceMappingURL=style.css.map */

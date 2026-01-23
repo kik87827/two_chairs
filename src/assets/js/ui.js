@@ -141,6 +141,10 @@ function layoutCommon() {
     }
 
     function setBottom() {
+      if (window.innerWidth > window.innerHeight) {
+        resetBottom();
+        return;
+      }
       btn_topgo_wrap.style.bottom = mb_bottom_layer.getBoundingClientRect().height + "px";
     }
 
@@ -161,7 +165,7 @@ function layoutCommon() {
           resetBottom();
         }
       },
-      { threshold: 0 }
+      { threshold: 0 },
     );
 
     observer.observe(check_topgo);
@@ -561,7 +565,7 @@ class DesignPopup {
             e.preventDefault();
             this.popupHide(this.selector);
           },
-          false
+          false,
         );
       });
     }

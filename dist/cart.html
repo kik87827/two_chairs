@@ -148,7 +148,7 @@
 					<ul class="page_process_list">
 						<li class="active"><span class="page_process_item">01 장바구니</span></li>
 						<li><span class="page_process_item">02 신청/결제</span></li>
-						<li><span class="page_process_item">03 주문완료</span></li>
+						<li><span class="page_process_item">03 신청완료</span></li>
 					</ul>
 				</div>
 			</div>
@@ -199,14 +199,16 @@
 											</dl>
 										</li>
 										<li>
-											<div class="board_cell_block">
-												<div class="number_text_package">
-													<span class="number_text_node">400,000</span>
-													<span class="number_text_unit">P</span>
+											<div class="board_cell_container">
+												<div class="board_cell_block">
+													<div class="number_text_package">
+														<span class="number_text_node">400,000</span>
+														<span class="number_text_unit">P</span>
+													</div>
 												</div>
-											</div>
-											<div class="board_cell_block">
-												<a href="#" class="btn_task_box line_active">신청하기</a>
+												<div class="board_cell_block">
+													<a href="#" class="btn_task_box line_active">신청하기</a>
+												</div>
 											</div>
 										</li>
 										<li>
@@ -243,14 +245,16 @@
 											</dl>
 										</li>
 										<li>
-											<div class="board_cell_block">
-												<div class="number_text_package">
-													<span class="number_text_node">1,400,000</span>
-													<span class="number_text_unit">P</span>
+											<div class="board_cell_container">
+												<div class="board_cell_block">
+													<div class="number_text_package">
+														<span class="number_text_node">1,400,000</span>
+														<span class="number_text_unit">P</span>
+													</div>
 												</div>
-											</div>
-											<div class="board_cell_block">
-												<a href="#" class="btn_task_box line_active">신청하기</a>
+												<div class="board_cell_block">
+													<a href="#" class="btn_task_box line_active">신청하기</a>
+												</div>
 											</div>
 										</li>
 										<li>
@@ -287,14 +291,16 @@
 											</dl>
 										</li>
 										<li>
-											<div class="board_cell_block">
-												<div class="number_text_package">
-													<span class="number_text_node">3,400,000</span>
-													<span class="number_text_unit">P</span>
+											<div class="board_cell_container">
+												<div class="board_cell_block">
+													<div class="number_text_package">
+														<span class="number_text_node">3,400,000</span>
+														<span class="number_text_unit">P</span>
+													</div>
 												</div>
-											</div>
-											<div class="board_cell_block">
-												<a href="#" class="btn_task_box line_active">신청하기</a>
+												<div class="board_cell_block">
+													<a href="#" class="btn_task_box line_active">신청하기</a>
+												</div>
 											</div>
 										</li>
 										<li>
@@ -322,7 +328,7 @@
 									<i class="equation_ico shape_plus"></i>
 									<div class="equation_chip">
 										<dl class="equation_obj">
-											<dt><span class="equation_keynode">배송비</span></dt>
+											<dt class="mb_hidden"><span class="equation_keynode">배송비</span></dt>
 											<dd>
 												<p class="equation_value_node">무료배송</p>
 											</dd>
@@ -419,7 +425,7 @@
 			</div>
 			<!-- mobile btn submit -->
 			<div class="mb_bottom_layer ds_type2">
-				<div class="report_mb_info_wrap">
+				<div class="report_mb_info_zone">
 					<div class="report_mb_info_block">
 						<dl class="report_chip_obj">
 							<dt><span class="report_key_node">상품수</span></dt>
@@ -446,7 +452,7 @@
 							</dd>
 						</dl>
 					</div>
-					<div class="report_mb_info_wrap">
+					<div class="report_mb_info_block">
 						<dl class="report_chip_obj highlight">
 							<dt><span class="report_key_node">보유 포인트</span></dt>
 							<dd>
@@ -459,7 +465,7 @@
 						<dl class="report_chip_obj highlight">
 							<dt><span class="report_key_node">총 결제 포인트</span></dt>
 							<dd>
-								<div class="number_text_package theme_2">
+								<div class="number_text_package highlight">
 									<span class="number_text_node">400,000</span>
 									<span class="number_text_unit">P</span>
 								</div>
@@ -485,7 +491,7 @@
 									<span class="number_text_node">400,000</span>
 									<span class="number_text_unit">P</span>
 								</div>
-								<button class="btn_toggle_ico"></button>
+								<button class="btn_toggle_ico" id="btn_report_toggle"></button>
 							</dd>
 						</dl>
 					</div>
@@ -535,6 +541,20 @@
 					callback() {},
 					closeCallback() {},
 				});
+
+				// 모바일 레이어 토글
+				const btn_report_toggle = document.querySelector("#btn_report_toggle");
+				const report_mb_info_zone = document.querySelector(".report_mb_info_zone");
+				btn_report_toggle?.addEventListener("click", (e) => {
+					e.preventDefault();
+					if (report_mb_info_zone) {
+						report_mb_info_zone.classList.toggle("active");
+						window.dispatchEvent(new Event("resize"));
+					}
+				});
+
+				// 전체 선택
+
 				// 퍼블확인용
 				let url = window.location.href.split("?")[1];
 				let url_2 = url !== undefined ? url.split("#")[0] : null;

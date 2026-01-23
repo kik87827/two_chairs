@@ -139,91 +139,23 @@
 			<div class="breadcrumb_wrap">
 				<ul class="breadcrumb_list">
 					<li><a href="#" class="breadcrumb_ico_item home"></a></li>
-					<li><a href="#" class="breadcrumb_item highlight">신청/결제</a></li>
+					<li><a href="#" class="breadcrumb_item highlight">신청완료</a></li>
 				</ul>
 			</div>
 			<div class="page_title_row">
-				<h2 class="page_title">신청/결제</h2>
+				<h2 class="page_title">신청완료</h2>
 				<div class="page_title_else_wrap">
 					<ul class="page_process_list">
 						<li><span class="page_process_item">01 장바구니</span></li>
-						<li class="active"><span class="page_process_item">02 신청/결제</span></li>
-						<li><span class="page_process_item">03 신청완료</span></li>
+						<li><span class="page_process_item">02 신청/결제</span></li>
+						<li class="active"><span class="page_process_item">03 신청완료</span></li>
 					</ul>
 				</div>
 			</div>
 		</main>
-		<!-- popup -->
-		<div class="popup_wrap" id="delivery_check_popup">
-			<div class="bg_dim"></div>
-			<div class="popup_box_tb_wrap">
-				<div class="popup_box_tb">
-					<div class="popup_box_td">
-						<div class="popup_box_container theme_2">
-							<div class="popup_title_bar">
-								<h2 class="popup_title">배송지 확인</h2>
-							</div>
-							<div class="popup_shell_wrap">
-								<div class="popup_shell_message_wrap">
-									<p class="popup_shell_main_message size_up">이 배송지 맞나요?</p>
-									<div class="popup_shell_sub_wrap">
-										<p class="popup_shell_sub_message">
-											서울 서초구 서초대로 88
-											<br />
-											유니온빌딩 5층 501호
-										</p>
-										<p class="popup_shell_sub_message">010-1234-5678</p>
-									</div>
-								</div>
-								<div class="popup_shell_btn_wrap btn_quad_wrap">
-									<a href="#" class="btn_quad size2 close_trigger"><span class="text_node">배송지 변경</span></a>
-									<a href="#" class="btn_quad size2 primary close_trigger"><span class="text_node">결제하기</span></a>
-								</div>
-							</div>
-							<a href="javascript:;" class="btn_popup_close"></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="popup_wrap" id="delivery_address_popup">
-			<div class="bg_dim"></div>
-			<div class="popup_item">
-				<div class="popup_title_row">
-					<h2 class="popup_title">기존 배송지</h2>
-				</div>
-				<div class="popup_contents_row">내용이 들어갑니다.</div>
-				<a href="#" class="btn_popup_close"></a>
-			</div>
-		</div>
-		<!-- // popup -->
 
 		<script>
-			document.addEventListener("DOMContentLoaded", function() {
-				// 인스턴스 선언
-				let delivery_check_popup = new DesignPopup({
-					selector: "#delivery_check_popup",
-					beforeCallback() {},
-					callback() {},
-					closeCallback() {},
-				});
-				let delivery_address_popup = new DesignPopup({
-					selector: "#delivery_address_popup",
-					beforeCallback() {},
-					callback() {},
-					closeCallback() {},
-				});
-
-				// 퍼블확인용
-				let url = window.location.href.split("?")[1];
-				let url_2 = url !== undefined ? url.split("#")[0] : null;
-				if (url_2 === "popup01") {
-					delivery_address_popup.popupShow();
-				}
-				if (url_2 === "popup02") {
-					delivery_check_popup.popupShow();
-				}
-			});
+			document.addEventListener("DOMContentLoaded", function() {});
 		</script>
 		<div class="btn_topgo_wrap">
 			<div class="btn_topgo_inner">
