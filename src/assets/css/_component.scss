@@ -109,7 +109,8 @@ input.form_input{border:1px solid #ddd; height:42px; box-sizing: border-box; col
 }
 
 .btn_toggle_ico{
-    &.active{}
+    display:inline-block; width:16px; height:16px; @include bgicon; background-image:url("../images/ico_toggle_up.svg");
+    &.active{transform:rotate(180deg)}
 }
 
 @media (max-width:767px){
