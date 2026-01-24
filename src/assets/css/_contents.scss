@@ -1115,3 +1115,140 @@ img.entry_render_img{}
 @media (orientation : landscape){
     .mb_bottom_layer{position:static;}
 }
+
+.form_subset_container{
+    .form_cols{}
+    .submit_cols{}
+
+}
+.form_brick{
+    .title_row{
+        .else_cols{}
+    }
+    .cont_row{}
+    .indent_para{}
+    &:last-of-type{}
+}
+.form_brick_title{
+    &:before{}
+}
+.form_cont_box{}
+.form_setdata_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.form_setdata{}
+.form_tb_wrap{}
+.form_tb{}
+.form_tr{}
+.form_cell{
+    &.define_th{}
+    &.define_td{}
+}
+.form_thtext{}
+.import{}
+input.form_input{
+    &::placeholder{}
+}
+.td_inside_wrap{}
+.td_inside_block{
+    &:last-of-type{}
+}
+.inline_dom_container{
+    .liquid_cols{
+        input.form_input{}
+    }
+    .auto_cols{}
+}
+.data_setbox_wrap{}
+.data_setbox{
+    .product_summary_container{
+        .img_cell{
+            img{}
+        }
+        .spec_cell{
+            .summary_spec_copy{
+                .keyword{}
+            }
+        }
+    }
+    .main_row{}
+    .sub_row{}
+    &:last-of-type{}
+}
+.summary_spec_note{}
+.prodct_summary_else_wrap{
+    .number_text_package{}
+}
+.indent_word_container{
+    .bullet_cols{}
+    .liquid_cols{}
+}
+.indent_word{}
+.word_info_para{
+    &.org_em{}
+    &.dark_em{}
+    &:last-of-type{}
+}
+.form_terms_infobox{
+    .props_row{
+        .props_item{}
+        .else_cols{
+            .btn_toggle_chip{}
+        }
+    }
+    .terms_row{}
+}
+
+.terms_info_box{}
+.form_terms_infobox{}
+
+.form_total_box{}
+.inslide_main_row{}
+.inslide_sub_row{
+    .amount_frame_list{}
+    .amount_item{
+        dt,dd{}
+        dt{}
+        dd{
+            .number_text_package{}
+        }
+    }
+    .amount_key{}
+}
+.amount_frame_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.amount_item{
+    dt,dd{}
+    dt{}
+    dd{
+        .number_text_package{}
+    }
+}
+.amount_key{}
+
+.form_submit_container{
+    &.btn_quad_wrap{
+
+    }
+}
+
+.user_data_render{}
+.user_data_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.user_data_item{
+    .liquid_cols{}
+    .auto_cols{
+        .btn_action_box{}
+    }
+}
+.main_wording{}
+.sub_wording_wrap{}
+.sub_wording{}
