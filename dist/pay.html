@@ -330,7 +330,7 @@
 									</div>
 								</div>
 							</div>
-							<p class="indent_para bullet_etri">약관 및 신청 내용을 확인하였으며, 정보 제공 등에 동의합니다.</p>
+							<p class="indent_para bullet_etri terms_note">약관 및 신청 내용을 확인하였으며, 정보 제공 등에 동의합니다.</p>
 						</div>
 					</div>
 				</div>
@@ -384,7 +384,7 @@
 								</div>
 							</div>
 							<div class="form_submit_container btn_quad_wrap">
-								<a href="#" class="btn_quad primary">
+								<a href="#" class="btn_quad primary big">
 									<span class="text_node">
 										<span class="count">340,000 P</span>
 										결제하기
@@ -545,6 +545,13 @@
 					beforeCallback() {},
 					callback() {},
 					closeCallback() {},
+				});
+
+				// 약관 토글
+				let form_terms_infobox = document.querySelector(".form_terms_infobox");
+				let btn_toggle_chip = form_terms_infobox?.querySelector(".btn_toggle_chip");
+				btn_toggle_chip?.addEventListener("click", (e) => {
+					form_terms_infobox.classList.toggle("active");
 				});
 
 				// 퍼블확인용

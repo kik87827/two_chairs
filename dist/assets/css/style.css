@@ -1319,6 +1319,10 @@ input.form_input.calendar {
   line-height: 1;
 }
 
+.btn_quad .text_node .count {
+  font-weight: 700;
+}
+
 .btn_role_box {
   display: inline-flex;
   gap: 8px;
@@ -4664,18 +4668,43 @@ input.input_dom::placeholder {
   vertical-align: top;
 }
 
+.form_terms_infobox .props_row .props_label {
+  font-size: 16px;
+  color: #222;
+  padding-top: 0;
+}
+
 .form_terms_infobox .props_row .else_cols .btn_toggle_chip {
   vertical-align: top;
 }
 
+.form_terms_infobox .terms_row {
+  display: none;
+}
+
+.form_terms_infobox.active .terms_row {
+  display: block;
+}
+
+.form_terms_infobox.active .btn_toggle_chip {
+  transform: rotate(180deg);
+}
+
 .terms_info_box {
   margin: 0 30px 20px;
+  color: #222;
   padding: 20px;
   background: #F8F8F8;
   box-sizing: border-box;
   height: 120px;
   position: relative;
   overflow-y: auto;
+}
+
+.indent_para.terms_note {
+  color: #666;
+  margin-top: 16px;
+  font-size: 12px;
 }
 
 .form_total_box {
@@ -4685,4 +4714,46 @@ input.input_dom::placeholder {
 
 /*
  */
+.inslide_main_row {
+  padding: 40px 60px;
+}
+
+.inslide_sub_row {
+  background: #f8f8f8;
+  padding: 24px 60px;
+}
+
+.inslide_sub_row .amount_item dd .number_text_package {
+  color: #666;
+  font-size: 18px;
+}
+
+.amount_frame_list > li {
+  margin-bottom: 16px;
+}
+
+.amount_frame_list > li:last-of-type {
+  margin-bottom: 0;
+}
+
+.amount_item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.amount_item dd .number_text_package {
+  font-size: 22px;
+}
+
+.amount_key {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.form_submit_container {
+  margin-top: 40px;
+}
 /*# sourceMappingURL=style.css.map */
