@@ -119,7 +119,8 @@ input.input_dom{}
 }
 
 .btn_toggle_chip{
-    &.active{}
+    width:24px; height:24px; display:inline-block;  @include bgicon; background-image:url("../images/ico_toggle_24.svg");
+    &.active{transform:rotate(180deg)}
 }
 
 .btn_action_box{

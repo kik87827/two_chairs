@@ -1224,15 +1224,18 @@ input.input_dom{
 .form_terms_infobox{
     border:1px solid #DDDDDD;
     .props_row{
-        .props_item{}
+        padding:23px 30px; display:flex; justify-content: space-between; align-items: center;
+        .props_item{vertical-align: top;}
         .else_cols{
-            .btn_toggle_chip{}
+            .btn_toggle_chip{vertical-align: top;}
         }
     }
     .terms_row{}
 }
 
-.terms_info_box{}
+.terms_info_box{margin:0 30px 20px; padding:20px; background:#F8F8F8; box-sizing: border-box; height:120px; position:relative; overflow-y:auto;
+
+}
 .form_terms_infobox{}
 
 .form_total_box{border:1px solid #2D1F13; background-color: #fff;}

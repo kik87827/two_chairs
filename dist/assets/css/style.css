@@ -356,7 +356,7 @@ img.ico_img {
 }
 /* layout */
 html:not(.touchmode) ::-webkit-scrollbar {
-  width: 7px;
+  width: 4px;
 }
 
 html:not(.touchmode) ::-webkit-scrollbar-thumb {
@@ -1430,6 +1430,20 @@ input.form_input.calendar {
 }
 
 .btn_toggle_ico.active {
+  transform: rotate(180deg);
+}
+
+.btn_toggle_chip {
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: 100% auto;
+  background-image: url("../images/ico_toggle_24.svg");
+}
+
+.btn_toggle_chip.active {
   transform: rotate(180deg);
 }
 
@@ -4637,6 +4651,31 @@ input.input_dom::placeholder {
 
 .form_terms_infobox {
   border: 1px solid #DDDDDD;
+}
+
+.form_terms_infobox .props_row {
+  padding: 23px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form_terms_infobox .props_row .props_item {
+  vertical-align: top;
+}
+
+.form_terms_infobox .props_row .else_cols .btn_toggle_chip {
+  vertical-align: top;
+}
+
+.terms_info_box {
+  margin: 0 30px 20px;
+  padding: 20px;
+  background: #F8F8F8;
+  box-sizing: border-box;
+  height: 120px;
+  position: relative;
+  overflow-y: auto;
 }
 
 .form_total_box {
