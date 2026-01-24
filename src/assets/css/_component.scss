@@ -55,9 +55,11 @@
     }
 }
 
-input.form_input{border:1px solid #ddd; height:42px; box-sizing: border-box; color:#222; font-size:14px; padding:0 0 0 12px; background:url("../images/ico_calendar_16.png") no-repeat calc(100% - 13px) 50%/16px auto;
-    &.calendar{width:150px;}
+input.form_input{border:1px solid #ddd; height:42px; box-sizing: border-box; color:#222; font-size:14px; padding:0 12px;
+    &.calendar{width:150px; padding:0 40px 0 12px; background:url("../images/ico_calendar_16.png") no-repeat calc(100% - 13px) 50%/16px auto;}
 }
+
+input.input_dom{}
 
 .btn_quad_wrap{display:flex; gap:24px;}
 .btn_quad{
@@ -106,9 +108,9 @@ input.form_input{border:1px solid #ddd; height:42px; box-sizing: border-box; col
     }
 }
 .btn_task_box{
-    display:inline-block; padding:6px 10px; color:#222222; min-height:32px; box-sizing: border-box; border:1px solid #333;
+    display:inline-block; padding:6px 10px; color:#222222; background:#fff; min-height:32px; box-sizing: border-box; border:1px solid #333;
     &.line_active{border-color:#DD8560; color:#DD8560;}
-    &.style2{}
+    &.style2{min-height:36px; padding:8px 18px;}
 }
 
 .btn_toggle_ico{
@@ -173,7 +175,7 @@ input.form_input{border:1px solid #ddd; height:42px; box-sizing: border-box; col
     width:100%;opacity:0;transition:.4s;
 }
 .popup_title_row{border-bottom:1px solid #DDDDDD;padding:18px 56px 17px 24px;}
-.popup_contents_row{position:relative;overflow:hidden;overflow-y:auto;flex:1;font-size:16px;color:#333333;}
+.popup_contents_row{position:relative;overflow:hidden;overflow-y:auto;flex:1;font-size:16px;color:#333333;padding:24px 24px 30px;}
 .popup_contents_row + .popup_btn_row{
     padding-top:20px;
 }

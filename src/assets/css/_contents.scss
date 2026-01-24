@@ -1117,53 +1117,79 @@ img.entry_render_img{}
 }
 
 .form_subset_container{
-    .form_cols{}
-    .submit_cols{}
-
+    max-width:1400px;margin:0 auto; padding:0 30px; display:flex; gap:2.85714285714286%;
+    .form_cols{flex:1;}
+    .submit_cols{flex:0 0 41.92857142857143%;}
 }
 .form_brick{
+    margin-bottom:24px;
     .title_row{
+        margin-bottom:16px; display:flex; justify-content: space-between; align-items: center;
         .else_cols{}
     }
     .cont_row{}
     .indent_para{}
-    &:last-of-type{}
-}
-.form_brick_title{
-    &:before{}
-}
-.form_cont_box{}
-.form_setdata_list{
-    > li{
-        &:last-of-type{}
+    &:last-of-type{margin-bottom:0;}
+    &.sticky_box{
+        position:sticky;top:100px;left:0;width:100%;
     }
 }
-.form_setdata{}
-.form_tb_wrap{}
-.form_tb{}
-.form_tr{}
+.form_brick_title{
+    display:inline-block; font-size:20px; line-height:1.3; position:relative; padding-left:14px;
+    &:before{display:block;content:'';width:4px; height:14px; background:#DD8560; position:absolute;top:7px;left:0;}
+}
+.form_cont_box{background:#F8F8F8; border:1px solid #ddd;}
+.form_setdata_list{
+    display:flex; gap:20px; padding:27px 30px;
+    > li{
+        position:relative;
+        &:after{display:block;content:'';width:1px; height:10px; background:#ccc; position:absolute;top:50%;right:-10px; transform: translateY(-50%);}
+        &:last-of-type{
+            &:after{display:none;}
+        }
+    }
+}
+.form_setdata{display:inline-block; font-size:16px; color:#222222; line-height:1.3;}
+.form_tb_wrap{padding:24px 30px;}
+.form_tb{display:table;width:100%;}
+.form_tr{display:table-row;
+    &:last-of-type{
+        .form_cell{padding-bottom:0;}
+    }
+}
 .form_cell{
-    &.define_th{}
+    display:table-cell; padding-bottom:16px;
+    &.define_th{width:1px;white-space: nowrap; padding-right:10px;}
     &.define_td{}
 }
-.form_thtext{}
-.import{}
-input.form_input{
-    &::placeholder{}
+.form_thtext{display:inline-block; font-size:16px; color:#222; line-height:1;}
+.import_node{display:inline-block;
+    &:after{display:block; content:'*'; font-size:16px; color:#DD1212;}
+}
+input.input_dom{
+    height:36px; line-height:1; padding: 0 16px; font-size:13px; color:#222; appearance: none; -webkit-radius:0; box-sizing: border-box; width:100%;
+    &::placeholder{color:#999;}
 }
 .td_inside_wrap{}
 .td_inside_block{
-    &:last-of-type{}
+    margin-bottom:10px;
+    &:last-of-type{margin-bottom:0;}
 }
 .inline_dom_container{
+    display:flex; align-items: center; gap:10px;
     .liquid_cols{
-        input.form_input{}
+        flex:1; min-width:0;
+        input.input_dom{}
     }
-    .auto_cols{}
+    .auto_cols{
+
+    }
 }
 .data_setbox_wrap{}
 .data_setbox{
+    background:#F8F8F8; border:1px solid #ddd; margin-bottom:16px; padding:24px;
     .product_summary_container{
+        flex:1;
         .img_cell{
             img{}
         }
@@ -1173,25 +1199,30 @@ input.form_input{
             }
         }
     }
-    .main_row{}
-    .sub_row{}
-    &:last-of-type{}
+    .main_row{
+        display:flex; align-items: center; gap:20px;
+    }
+    .sub_row{margin-top:20px; background:#fff; padding:16px;}
+    &:last-of-type{margin-bottom:0;}
 }
-.summary_spec_note{}
+.summary_spec_note{display:inline-block; font-size:14px; color:#222;}
 .prodct_summary_else_wrap{
-    .number_text_package{}
+    .number_text_package{font-size:20px;}
 }
 .indent_word_container{
-    .bullet_cols{}
-    .liquid_cols{}
+    display:flex; gap:10px;
+    .bullet_cols{flex:0; white-space: nowrap;}
+    .liquid_cols{flex:1; position:relative; top:-1px;}
 }
-.indent_word{}
+.indent_word{display:inline-block;background:#fff; border:1px solid #ddd; border-radius: 2px; color:#333333; padding:4px 6px; font-size:11px; line-height:1;}
 .word_info_para{
-    &.org_em{}
-    &.dark_em{}
-    &:last-of-type{}
+    margin-bottom:10px; font-size:14px; color:#666666;
+    &.org_em{color:#DD8560;}
+    &.dark_em{color:#222;}
+    &:last-of-type{margin-bottom:0;}
 }
 .form_terms_infobox{
+    border:1px solid #DDDDDD;
     .props_row{
         .props_item{}
         .else_cols{
@@ -1204,7 +1235,9 @@ input.form_input{
 .terms_info_box{}
 .form_terms_infobox{}
 
-.form_total_box{}
+.form_total_box{border:1px solid #2D1F13; background-color: #fff;}
+/*
+ */
 .inslide_main_row{}
 .inslide_sub_row{
     .amount_frame_list{}
