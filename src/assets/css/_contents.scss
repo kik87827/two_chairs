@@ -1236,7 +1236,7 @@ input.input_dom{
 }
 .indent_word_container{
     display:flex; gap:10px;
-    .bullet_cols{flex:0; white-space: nowrap;}
+    .bullet_cols{flex:0; white-space: nowrap;font-size:0;line-height:0;}
     .liquid_cols{flex:1; position:relative; top:-1px;}
 }
 .indent_word{display:inline-block;background:#fff; border:1px solid #ddd; border-radius: 2px; color:#333333; padding:4px 6px; font-size:11px; line-height:1;}
@@ -1369,6 +1369,7 @@ input.input_dom{
     .word_info_para{font-size:12px; margin-bottom:8px;}
     .data_setbox{
          .sub_row{padding:12px;}
+         &.mb_ptype2{padding:20px 16px;}
     }
 
     .form_terms_infobox{
@@ -1423,7 +1424,7 @@ input.input_dom{
 }
 
 .evidence_box{border:1px solid #ddd;flex:1;display:flex; flex-direction: column;}
-.evidence_body{background:#F8F8F8;flex:1; padding:30px 24px;}
+.evidence_body{background:#F8F8F8;flex:1; padding:28px 24px;}
 .evidence_tb{display:table;width:100%;}
 .evidence_tr{display:table-row;
     &:last-of-type{
@@ -1489,6 +1490,11 @@ input.input_dom{
         &.define_td{}
     } */
      border-top:1px solid #ddd; display:flex; padding:24px 25px; gap:54px; align-items: center;
+     &.ptype2{padding:22px 24px;}
+     &.align_2{
+        justify-content: space-between;
+     }
+     &:last-of-type{border-top:0;}
      .evi_foot_cols{
         &.key_define{}
         &.value_define{}

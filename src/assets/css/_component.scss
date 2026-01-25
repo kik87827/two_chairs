@@ -190,6 +190,7 @@ input.input_dom{}
 .popup_item{
     box-sizing: border-box;z-index:20; max-width:500px;margin:50px auto; max-height:calc(100% - 100px); background:#fff;  position:relative; display:flex; flex-direction: column;
     width:100%;opacity:0;transition:.4s;
+    &.size2{max-width:1024px;}
 }
 .popup_title_row{border-bottom:1px solid #DDDDDD;padding:18px 56px 17px 24px;}
 .popup_contents_row{position:relative;overflow:hidden;overflow-y:auto;flex:1;font-size:16px;color:#333333;padding:24px 24px 30px;}
@@ -247,6 +248,7 @@ input.input_dom{}
 @media (max-width:767px){
     .popup_item{
         max-width:100%;margin:16px; max-height:calc(100% - 32px);
+
     }
     .popup_title{}
     .popup_contents_row{font-size:14px;}

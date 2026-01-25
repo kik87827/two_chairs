@@ -1822,6 +1822,10 @@ input.form_input.calendar {
   transition: 0.4s;
 }
 
+.popup_item.size2 {
+  max-width: 1024px;
+}
+
 .popup_title_row {
   border-bottom: 1px solid #DDDDDD;
   padding: 18px 56px 17px 24px;
@@ -4907,6 +4911,8 @@ input.input_dom::placeholder {
 .indent_word_container .bullet_cols {
   flex: 0;
   white-space: nowrap;
+  font-size: 0;
+  line-height: 0;
 }
 
 .indent_word_container .liquid_cols {
@@ -5174,6 +5180,10 @@ input.input_dom::placeholder {
     padding: 12px;
   }
 
+  .data_setbox.mb_ptype2 {
+    padding: 20px 16px;
+  }
+
   .form_terms_infobox .props_row {
     padding: 23px 20px;
   }
@@ -5274,7 +5284,7 @@ input.input_dom::placeholder {
 .evidence_body {
   background: #F8F8F8;
   flex: 1;
-  padding: 30px 24px;
+  padding: 28px 24px;
 }
 
 .evidence_tb {
@@ -5407,6 +5417,18 @@ input.input_dom::placeholder {
   padding: 24px 25px;
   gap: 54px;
   align-items: center;
+}
+
+.evidence_foot.ptype2 {
+  padding: 22px 24px;
+}
+
+.evidence_foot.align_2 {
+  justify-content: space-between;
+}
+
+.evidence_foot:last-of-type {
+  border-top: 0;
 }
 
 @media (max-width: 1280px) {
