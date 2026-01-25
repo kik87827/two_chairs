@@ -814,6 +814,11 @@ img.entry_render_img{}
         font-size:14px; color:#222;/*  @include clamp(3); */ line-height:1.6;
         .keyword{font-weight:700;}
     }
+    .summary_spec_mb_wrap{
+        .number_text_package{
+            display:none;
+        }
+    }
 }
 
 .sub_cell_group{flex:1; display:flex;}
@@ -1063,7 +1068,7 @@ img.entry_render_img{}
 }
 @media (max-width:767px){
     .board_pay_cols{display:none;}
-    .page_title_row{margin:40px 16px 24px 16px; flex-direction:column;gap:32px;border-color:#ddd;}
+    .page_title_row{margin:40px 16px 24px 16px; flex-direction:column;gap:32px;}
     .page_title{font-size:28px}
     .bc_sub_cols{display:none;}
     .board_data_container{padding:0 16px;}
@@ -1097,6 +1102,17 @@ img.entry_render_img{}
     }
     .equation_value_node{font-weight:400; font-size:14px;}
     .report_value_node{font-size:16px;}
+
+    .product_summary_container{
+        .summary_spec_copy{
+            line-height:1.3;
+            .keyword{display:inline;}
+        }
+        .summary_spec_mb_wrap{
+            display:flex; justify-content: space-between; align-items: center; margin-top:5px;
+            .number_text_package{display:block; font-size:18px;}
+        }
+    }
 }
 
 @media (max-width:370px){
@@ -1125,6 +1141,9 @@ img.entry_render_img{}
     margin-bottom:24px;
     .title_row{
         margin-bottom:16px; display:flex; justify-content: space-between; align-items: center;
+        &.has_else{
+            margin-bottom:10px;
+        }
         .else_cols{}
     }
     .cont_row{}
@@ -1289,15 +1308,93 @@ input.input_dom{
 .user_data_render{}
 .user_data_list{
     > li{
-        &:last-of-type{}
+        margin-bottom:20px; padding-bottom:20px; border-bottom:1px solid #ddd;
+        &:last-of-type{border-bottom:0;margin-bottom:0; padding-bottom:0;}
     }
 }
 .user_data_item{
-    .liquid_cols{}
+    display:flex; gap:20px;
+    .liquid_cols{flex:1;}
     .auto_cols{
         .btn_action_box{}
     }
 }
-.main_wording{}
-.sub_wording_wrap{}
-.sub_wording{}
+.main_wording{font-size:16px; color:#222222; font-weight:500;}
+.sub_wording_wrap{margin-top:5px;}
+.sub_wording{font-size:14px; color:#666;margin-bottom:5px;
+    &:last-of-type{margin-bottom:0;}
+}
+
+@media (max-width:767px){
+    .user_data_item{
+        flex-direction: column; gap:16px;
+        .liquid_cols{}
+        .auto_cols{
+            .btn_action_box{}
+        }
+    }
+    .main_wording{font-size:16px; color:#222222; font-weight:500;}
+    .sub_wording_wrap{margin-top:5px;}
+    .sub_wording{font-size:14px; color:#666;margin-bottom:5px;
+        &:last-of-type{margin-bottom:0;}
+    }
+
+    .form_subset_container{flex-direction: column;gap:40px; padding:0 16px 34px;}
+
+    .form_brick{
+        &.sticky_box{position:static;}
+    }
+    .form_brick_title{
+        font-size:16px;padding-left:10px;
+        &:before{width:4px; height:12px; top:5px;}
+    }
+    .form_setdata_list{padding:20px 24px;}
+    .form_setdata{font-size:14px;}
+    .form_tb_wrap{padding:24px 20px;}
+    .form_thtext{font-size:14px;}
+
+    .inline_dom_container{
+        gap:8px;
+        .btn_task_box{padding-left:12px;padding-right:12px;}
+    }
+
+    .prodct_summary_else_wrap{display:none;}
+
+    .word_info_para{font-size:12px; margin-bottom:8px;}
+    .data_setbox{
+         .sub_row{padding:12px;}
+    }
+
+    .form_terms_infobox{
+        .props_row{padding:23px 20px;}
+    }
+
+    .inslide_main_row{padding:20px 24px 16px}
+
+    .amount_key{font-size:14px; font-weight:400;}
+    .amount_item{
+         dd{
+             .number_text_package{font-size:16px;}
+         }
+    }
+    .inslide_sub_row{background:none; padding:14px 8px; margin:0 16px; border-top:1px solid #ddd;
+        .amount_item{
+             dd{
+                 .number_text_package{font-size:16px;}
+             }
+        }
+    }
+    .form_total_box{background:#F8F8F8;}
+
+    .form_submit_container{
+        &.pc_submit{display:none;}
+        .btn_quad{min-height:50px !important;
+            .text_node{font-size:16px;}
+        }
+    }
+    .form_terms_infobox {
+        .props_row{
+             .props_label{font-size:14px;}
+        }
+    }
+}
