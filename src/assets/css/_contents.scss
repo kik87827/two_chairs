@@ -1541,3 +1541,38 @@ input.input_dom{
         &.highlight{font-size:18px;}
     }
 }
+
+
+/*  */
+.middle_info_container{}
+.middle_info_inner{padding:0 16px;}
+.middle_info_item{
+    .copy_row{
+        text-align: center;
+        .ico{
+            width:60px; height:60px; @include bgicon; margin:0 auto 35px;
+            &.error{background-image:url("../images/ico_error.png")}
+        }
+        .main_copy{font-size:28px; color:#222; line-height:1.4; word-break: keep-all;}
+        .sub_copy{font-size:14px; color:#666; line-height:1.4; margin-top:18px; word-break: keep-all;}
+    }
+    .btn_row{
+        max-width:300px; margin:40px auto 0;
+        .btn_quad{}
+    }
+}
+@media (max-width:760px){
+    .middle_info_item{
+        .copy_row{
+            .ico{
+                 margin-bottom:20px;
+            }
+            .main_copy{font-size:24px;}
+            .sub_copy{ margin-top:15px;}
+        }
+        .btn_row{
+            margin-top:30px;
+        }
+    }
+}
+/* //  */
