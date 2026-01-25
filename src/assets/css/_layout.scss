@@ -107,6 +107,8 @@ html:not(.touchmode){
 .footer_info_para{color:#222222; opacity:.5; font-weight:500;}
 .footer_copy_para{margin-top:7px; color:#222222; opacity:.3; }
 
+.page_section_row{max-width:1400px; margin:0 auto;padding:0 30px;}
+
 
 @media (max-width:1680px){
     .btn_topgo{transform: translateX(0);}
@@ -138,6 +140,8 @@ html:not(.touchmode){
         }
         .level_text_node{font-size:14px;}
     }
+
+    .page_section_row{padding:0 16px;}
 }
 
 @media (max-width:767px){

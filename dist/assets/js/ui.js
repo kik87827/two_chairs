@@ -169,7 +169,7 @@ function layoutCommon() {
         }
       }, {
         threshold: 0
-      },
+      }
     );
 
     observer.observe(check_topgo);
@@ -570,7 +570,7 @@ class DesignPopup {
             e.preventDefault();
             this.popupHide(this.selector);
           },
-          false,
+          false
         );
       });
     }

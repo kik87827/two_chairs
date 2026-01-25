@@ -165,7 +165,7 @@ function layoutCommon() {
           resetBottom();
         }
       },
-      { threshold: 0 },
+      { threshold: 0 }
     );
 
     observer.observe(check_topgo);
@@ -565,7 +565,7 @@ class DesignPopup {
             e.preventDefault();
             this.popupHide(this.selector);
           },
-          false,
+          false
         );
       });
     }
