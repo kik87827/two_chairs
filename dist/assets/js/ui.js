@@ -203,8 +203,8 @@ function stickyAnchorTab() {
   if (!anchor_global_container) {
     return;
   }
-  initMenuAction();
-  anchor_menu[0].classList.add("first");
+  /* initMenuAction();
+  anchor_menu[0].classList.add("first"); */
   // 화면 로딩 시 마지막 탭 이동 필요 시 주석 해제
   // anchor_menu[anchor_menu.length-1].classList.add("last");
 
@@ -213,17 +213,17 @@ function stickyAnchorTab() {
       getPosValue = getLayerPos();
       getPosHeight = getHeight();
       getPosArrayValue = getPosArray();
-      initMenuAction();
+      // initMenuAction();
     }
     getWindowWid = window.innerWidth;
   });
 
   scrollAction();
 
-  window.addEventListener("touchstart", () => {
+  /* window.addEventListener("touchstart", () => {
     calculFunc();
     btnClickIs = false;
-  });
+  }); */
 
   window.addEventListener("mousewheel", () => {
     /* const y = window.scrollY;
@@ -235,7 +235,7 @@ function stickyAnchorTab() {
 
   window.addEventListener("mousedown", () => {
     calculFunc();
-    btnClickIs = false;
+    // btnClickIs = false;
   });
   let ticking = false;
   window.addEventListener("scroll", () => {
@@ -245,7 +245,7 @@ function stickyAnchorTab() {
     calculFunc();
     scrollAction();
     /* console.log("hor scroll global"); */
-    if (!ticking) {
+    /* if (!ticking) {
       requestAnimationFrame(() => {
         // 실제 작업
         menuHorFunc();
@@ -253,25 +253,25 @@ function stickyAnchorTab() {
         ticking = false;
       });
       ticking = true;
-    }
+    } */
   });
   /* anchor_menu_list_wrap.addEventListener("scroll", (e) => {
     const left = e.target.scrollLeft;
     console.log("hor scroll left:", left);
   }); */
-  window.addEventListener("scrollend", () => {
+  /* window.addEventListener("scrollend", () => {
     scrollEndAction();
 
     // anchor_menu_list_wrap.scrollLeft = active_anchor_menu
     // menuHorFunc();
-  });
+  }); */
 
   window.addEventListener("touchmove", () => {
     calculFunc();
     scrollAction();
   });
 
-  prose_total?.addEventListener("click", (e) => {
+  /* prose_total?.addEventListener("click", (e) => {
     e.preventDefault();
     window.scrollTo({
       top: 0,
@@ -283,9 +283,9 @@ function stickyAnchorTab() {
       activeItem.classList.remove("active");
     }
     btnClickIs = true;
-  });
+  }); */
 
-  anchor_menu.forEach((item) => {
+  /* anchor_menu.forEach((item) => {
     item.addEventListener("click", (e) => {
       e.preventDefault();
       const thisTarget = e.currentTarget;
@@ -306,9 +306,9 @@ function stickyAnchorTab() {
     if (item.classList.contains("last")) {
       item.click();
     }
-  });
+  }); */
 
-  function menuHorFunc() {
+  /* function menuHorFunc() {
     const active_anchor_menu = document.querySelector(".anchor_menu.active");
     if (!!active_anchor_menu) {
       const active_anchor_li = active_anchor_menu?.closest("li");
@@ -334,13 +334,12 @@ function stickyAnchorTab() {
         }
       }
     }
-  }
+  } */
 
-  function initMenuAction() {
+  /*  function initMenuAction() {
     anchor_global_container.style.removeProperty("height");
     anchor_global_container.style.minHeight = anchor_menu_list.getBoundingClientRect().height + "px";
-  }
-
+  } */
   function calculFunc() {
     getPosValue = getLayerPos();
     getPosHeight = getHeight();
@@ -378,33 +377,33 @@ function stickyAnchorTab() {
 
   function scrollAction() {
     if (getPosValue - header_wrapHeight < window.scrollY) {
-      if (!btnClickIs) {
+      /* if (!btnClickIs) {
         prose_total.classList.remove("active");
-      }
+      } */
       anchor_menu_list_wrap.classList.add("fixed");
     } else {
       if (!btnClickIs) {
         prose_total.classList.add("active");
-        anchor_menu_list_wrap.scrollLeft = 0;
-        if (activeItem) {
+        //anchor_menu_list_wrap.scrollLeft = 0;
+        /*  if (activeItem) {
           activeItem.classList.remove("active");
-        }
+        } */
       }
       anchor_menu_list_wrap.classList.remove("fixed");
       /*  */
       //prose_total.classList.add("active");
     }
-    if (!btnClickIs) {
+    /* if (!btnClickIs) {
       anchor_menu.forEach((item, index) => {
         if (getPosArrayValue[index] - getPosHeight - header_wrapHeight <= window.scrollY) {
           activeTab(item);
         }
       });
-      endScroll();
-    }
+      // endScroll();
+    } */
   }
 
-  function endScroll() {
+  /* function endScroll() {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     const windowHeight = window.innerHeight;
     const scrollHeight = document.documentElement.scrollHeight;
@@ -421,17 +420,17 @@ function stickyAnchorTab() {
     if (scrollTop + windowHeight < scrollHeight - offset) {
       isEnd = false;
     }
-  }
+  } */
 
-  function scrollEndAction() {
+  /* function scrollEndAction() {
     if (!!anchor_menu) {
       anchor_menu.forEach((item) => {
         item.classList.remove("click_active");
       });
     }
-  }
+  } */
 
-  function activeTab(target) {
+  /* function activeTab(target) {
     if (activeItem) {
       activeItem.classList.remove("active");
     }
@@ -439,9 +438,9 @@ function stickyAnchorTab() {
     // anchor_menu_list_wrap.scrollLeft = anchor_menu_list;
     /* setTimeout(() => {
       anchor_menu_list_wrap.scrollLeft = target.offsetLeft + target.getBoundingClientRect().width;
-    }, 100); */
+    }, 100);
     activeItem = target;
-  }
+  } */
 }
 
 function comboUI() {
