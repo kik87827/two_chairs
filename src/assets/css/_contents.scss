@@ -825,6 +825,14 @@ img.entry_render_img{}
             display:none;
         }
     }
+    &.align_2{}
+}
+
+.summary_spec_util{
+    &.style2{}
+}
+.summary_spec_mb_point{
+    .number_text_package{}
 }
 
 .sub_cell_group{flex:1; display:flex;}

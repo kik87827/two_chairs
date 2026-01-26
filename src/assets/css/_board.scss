@@ -1,0 +1,226 @@
+/* sorting */
+.sorting_box{}
+.sorting_items_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+.box_props_wrap{}
+input.box_props_dom{
+    &:checked{
+        & + .box_props_label{}
+    }
+}
+.box_props_label{}
+
+.range_input_wrap{
+    .input_cols{}
+    .unit_cols{}
+}
+input.range_input{}
+.range_input_unit{}
+
+.sorting_search_container{
+    .option_cols{}
+    .input_cols{
+        input.sorting_search_input{}
+    }
+    .btn_cols{
+
+    }
+}
+
+.btn_inline_card{
+  .ico{
+    &.shape_search{}
+    &.shape_reload{}
+  }
+  .text_node{}
+  &.highlight{
+    .text_node{}
+  }
+}
+
+input.sorting_search_input{}
+
+
+.tab_global_wrap{}
+.pctab_wrap{}
+.pctab_list{
+ > li{
+
+ }
+}
+.pctab{
+    &.active{
+        &:after{}
+         .text_node{}
+    }
+    .text_node{}
+    &:after{}
+}
+
+.mbselect_wrap{}
+.mbselect_target{
+    .text_node{}
+}
+.mbselect_option_layer{}
+.mbselect_option_list{
+    > li{
+
+    }
+}
+.mbselect_option{
+    &:hover{}
+}
+
+/* list */
+.data_chip_container{}
+.data_chip_list{
+    > li{
+        &:last-of-type{}
+    }
+}
+
+.data_chip_brick{
+    .sub_row{
+        .current_log_cols{}
+        .detail_log_cols{}
+    }
+    .main_row{
+        .product_cols{
+            .product_summary_container{}
+            .product_pc_else_wrap{}
+        }
+        .btn_cols{
+            .btn_vertex_list{}
+        }
+    }
+}
+.product_pc_else_wrap{}
+.current_box{
+    &.theme_01{}
+    &.theme_02{}
+    &.theme_03{}
+    &.theme_04{}
+}
+.detail_log_list{
+    > li{
+        &:last-of-type{
+            &:after{}
+        }
+        &:after{}
+    }
+}
+.detail_log_item{
+    &.highlight{}
+    &.highlight_2{}
+}
+.btn_vertex_list{
+    > li{
+
+    }
+}
+.btn_vertex{
+    .text_node{}
+    &.active{
+        .text_node{}
+    }
+}
+
+
+/* board top */
+.signage_wrap{}
+.signage_block{
+    &:last-of-type{}
+}
+.cusinfo_box_wrap{
+
+}
+.cusinfo_box_list{
+    > li{}
+}
+.cusinfo_box{
+    .flag_row{}
+    .fraction_row{
+        .cusinfo_fraction_item{}
+        .metric_item_wrap{}
+    }
+    &.theme_01{}
+    &.theme_02{}
+    &.theme_03{}
+    &.theme_04{}
+}
+.cusinfo_flag_box{
+    .dia{}
+    .text_node{}
+}
+.cusinfo_fraction_item{
+    .ico{
+        &.color_black{}
+        &.color_blue{}
+        &.color_gold{}
+        &.color_silver{}
+    }
+    .metric_item_wrap{}
+}
+.metric_item_wrap{}
+.metric_number{}
+.metric_unit{}
+
+/* list board */
+.board_ui_wrap{}
+.board_fraction_row{}
+.board_fraction_item{
+    strong{}
+}
+.board_list_row{}
+.responsive_list_tb_wrap{}
+.responsive_list_tb{
+    colgroup{}
+    thead{
+        tr{
+            th{}
+        }
+    }
+    tbody{
+        tr{
+            td{
+                &.hidden_cell{}
+                &.has_mb_btn{}
+                &.ptype2{}
+                &.nodata_td{
+                    .nodata_para{}
+                }
+            }
+        }
+    }
+}
+.nodata_para{}
+.respon_thtext{}
+.respon_tdtext{}
+.btn_square{
+    .text_node{}
+    &:hover{
+        .text_node{}
+    }
+}
+.metric_board_item{
+}
+.metric_board_number{}
+.metric_board_unit{}
+
+/* paging */
+.paging_wrap{}
+.btn_paging_control{
+    &.first{}
+    &.prev{}
+    &.next{}
+    &.last{}
+}
+.paging_count_list{
+    > li{}
+}
+.btn_paging_count{
+    &.active{}
+}

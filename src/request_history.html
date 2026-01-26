@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   @@include('./include/_head.html')
 
@@ -6,121 +6,361 @@
     <div class="page_wrap">
       @@include('./include/_header.html')
       <main class="middle_wrap">
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
-        <br />
-        내용이 들어갑니다.
+        <div class="breadcrumb_wrap">
+          <ul class="breadcrumb_list">
+            <li><a href="#" class="breadcrumb_ico_item home"></a></li>
+            <li><a href="#" class="breadcrumb_item highlight">신청내역</a></li>
+          </ul>
+        </div>
+        <div class="page_title_row">
+          <h2 class="page_title">신청내역</h2>
+        </div>
+        <div class="page_contents_row">
+          <div class="sorting_box">
+            <ul class="sorting_items_list">
+              <li>
+                <div class="box_props_wrap">
+                  <input type="radio" class="box_props_dom" name="while" id="while01" checked />
+                  <label for="while01" class="box_props_label">1개월</label>
+                  <input type="radio" class="box_props_dom" name="while" id="while02" />
+                  <label for="while02" class="box_props_label">3개월</label>
+                  <input type="radio" class="box_props_dom" name="while" id="while03" />
+                  <label for="while03" class="box_props_label">6개월</label>
+                  <input type="radio" class="box_props_dom" name="while" id="while04" />
+                  <label for="while04" class="box_props_label">1년</label>
+                </div>
+              </li>
+              <li>
+                <div class="range_input_wrap">
+                  <div class="input_cols">
+                    <input type="text" class="range_input" value="2025.12.25" />
+                  </div>
+                  <div class="unit_cols"><span class="range_input_unit">~</span></div>
+                  <div class="input_cols">
+                    <input type="text" class="range_input" value="2026.01.25" />
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="sorting_search_container">
+                  <div class="input_cols"><input type="text" class="sorting_search_input" placeholder="검색어를 입력하세요" /></div>
+                  <div class="btn_cols">
+                    <a href="#" class="btn_inline_card highlight">
+                      <i class="ico shape_search"></i>
+                      <span class="text_node">검색</span>
+                    </a>
+                    <a href="#" class="btn_inline_card">
+                      <i class="ico shape_reload"></i>
+                      <span class="text_node">초기화</span>
+                    </a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="tab_global_wrap">
+            <div class="pctab_wrap">
+              <ul class="pctab_list">
+                <li>
+                  <a href="#" class="pctab active"><span class="text_node">전체</span></a>
+                </li>
+                <li>
+                  <a href="#" class="pctab"><span class="text_node">신청완료</span></a>
+                </li>
+                <li>
+                  <a href="#" class="pctab"><span class="text_node">배송요청</span></a>
+                </li>
+                <li>
+                  <a href="#" class="pctab"><span class="text_node">배송완료</span></a>
+                </li>
+                <li>
+                  <a href="#" class="pctab"><span class="text_node">취소완료</span></a>
+                </li>
+              </ul>
+            </div>
+            <div class="mbselect_wrap">
+              <a href="#" class="mbselect_target"><span class="text_node">전체</span></a>
+              <div class="mbselect_option_layer">
+                <ul class="mbselect_option_list">
+                  <li><a href="#" class="mbselect_option">전체</a></li>
+                  <li><a href="#" class="mbselect_option">신청완료</a></li>
+                  <li><a href="#" class="mbselect_option">배송요청</a></li>
+                  <li><a href="#" class="mbselect_option">배송완료</a></li>
+                  <li><a href="#" class="mbselect_option">취소완료</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="data_chip_container">
+            <ul class="data_chip_list">
+              <li>
+                <div class="data_chip_brick">
+                  <div class="sub_row">
+                    <div class="current_log_cols">
+                      <span class="current_box theme_01">신청완료</span>
+                    </div>
+                    <div class="detail_log_cols">
+                      <ul class="detail_log_list">
+                        <li><span class="detail_log_item">2025.12.12 10:52신청</span></li>
+                        <li><span class="detail_log_item">202512240001</span></li>
+                        <li><span class="detail_log_item highlight">희망 출발일:2026.01.25</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="main_row">
+                    <div class="product_cols">
+                      <div class="product_summary_container align_2">
+                        <a href="#" class="img_cell"><img src="./assets/images/temp_cart_01.png" alt="" /></a>
+                        <a href="#" class="spec_cell">
+                          <div class="summary_spec_copy">
+                            <strong class="keyword">[식품]</strong>
+                            1등급 한우 VIP 명품선물세트 1.6Kg (꽃등심/안심/채끝/특수부위)
+                          </div>
+                          <div class="summary_spec_util">수량 1개</div>
+                          <div class="summary_spec_util style2">사용기간:2025.12.15 ~ 2026.05.05</div>
+                          <div class="summary_spec_mb_point">
+                            <div class="number_text_package">
+                              <span class="number_text_node">400,000</span>
+                              <span class="number_text_unit">P</span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="product_pc_else_wrap">
+                        <div class="number_text_package">
+                          <span class="number_text_node">400,000</span>
+                          <span class="number_text_unit">P</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="btn_cols">
+                      <ul class="btn_vertex_list">
+                        <li>
+                          <a href="#" class="btn_vertex"><span class="text_node">신청취소</span></a>
+                        </li>
+                        <li>
+                          <a href="#" class="btn_vertex active"><span class="text_node">신청/결제 상세</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="data_chip_brick">
+                  <div class="sub_row">
+                    <div class="current_log_cols">
+                      <span class="current_box theme_02">배송요청</span>
+                    </div>
+                    <div class="detail_log_cols">
+                      <ul class="detail_log_list">
+                        <li><span class="detail_log_item">2025.12.12 10:52신청</span></li>
+                        <li><span class="detail_log_item">202512240001</span></li>
+                        <li><span class="detail_log_item highlight">희망 출발일:2026.01.25</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="main_row">
+                    <div class="product_cols">
+                      <div class="product_summary_container align_2">
+                        <a href="#" class="img_cell"><img src="./assets/images/temp_cart_01.png" alt="" /></a>
+                        <a href="#" class="spec_cell">
+                          <div class="summary_spec_copy">
+                            <strong class="keyword">[식품]</strong>
+                            1등급 한우 VIP 명품선물세트 1.6Kg (꽃등심/안심/채끝/특수부위)
+                          </div>
+                          <div class="summary_spec_util">수량 1개</div>
+                          <div class="summary_spec_util style2">사용기간:2025.12.15 ~ 2026.05.05</div>
+                          <div class="summary_spec_mb_point">
+                            <div class="number_text_package">
+                              <span class="number_text_node">400,000</span>
+                              <span class="number_text_unit">P</span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="number_text_package pc_point">
+                        <span class="number_text_node">400,000</span>
+                        <span class="number_text_unit">P</span>
+                      </div>
+                    </div>
+                    <div class="btn_cols">
+                      <ul class="btn_vertex_list">
+                        <li>
+                          <a href="#" class="btn_vertex"><span class="text_node">신청취소</span></a>
+                        </li>
+                        <li>
+                          <a href="#" class="btn_vertex active"><span class="text_node">신청/결제 상세</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="data_chip_brick">
+                  <div class="sub_row">
+                    <div class="current_log_cols">
+                      <span class="current_box theme_01">신청완료</span>
+                    </div>
+                    <div class="detail_log_cols">
+                      <ul class="detail_log_list">
+                        <li><span class="detail_log_item">2025.12.12 10:52신청</span></li>
+                        <li><span class="detail_log_item">202512240001</span></li>
+                        <li><span class="detail_log_item highlight">희망 출발일:2026.01.25</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="main_row">
+                    <div class="product_cols">
+                      <div class="product_summary_container align_2">
+                        <a href="#" class="img_cell"><img src="./assets/images/temp_cart_01.png" alt="" /></a>
+                        <a href="#" class="spec_cell">
+                          <div class="summary_spec_copy">
+                            <strong class="keyword">[식품]</strong>
+                            1등급 한우 VIP 명품선물세트 1.6Kg (꽃등심/안심/채끝/특수부위)
+                          </div>
+                          <div class="summary_spec_util">수량 1개</div>
+                          <div class="summary_spec_util style2">사용기간:2025.12.15 ~ 2026.05.05</div>
+                          <div class="summary_spec_mb_point">
+                            <div class="number_text_package">
+                              <span class="number_text_node">400,000</span>
+                              <span class="number_text_unit">P</span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="number_text_package pc_point">
+                        <span class="number_text_node">400,000</span>
+                        <span class="number_text_unit">P</span>
+                      </div>
+                    </div>
+                    <div class="btn_cols">
+                      <ul class="btn_vertex_list">
+                        <li>
+                          <a href="#" class="btn_vertex"><span class="text_node">신청취소</span></a>
+                        </li>
+                        <li>
+                          <a href="#" class="btn_vertex active"><span class="text_node">신청/결제 상세</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="data_chip_brick">
+                  <div class="sub_row">
+                    <div class="current_log_cols">
+                      <span class="current_box theme_03">배송완료</span>
+                    </div>
+                    <div class="detail_log_cols">
+                      <ul class="detail_log_list">
+                        <li><span class="detail_log_item">2025.12.12 10:52신청</span></li>
+                        <li><span class="detail_log_item">202512240001</span></li>
+                        <li><span class="detail_log_item highlight">희망 출발일:2026.01.25</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="main_row">
+                    <div class="product_cols">
+                      <div class="product_summary_container align_2">
+                        <a href="#" class="img_cell"><img src="./assets/images/temp_cart_01.png" alt="" /></a>
+                        <a href="#" class="spec_cell">
+                          <div class="summary_spec_copy">
+                            <strong class="keyword">[식품]</strong>
+                            1등급 한우 VIP 명품선물세트 1.6Kg (꽃등심/안심/채끝/특수부위)
+                          </div>
+                          <div class="summary_spec_util">수량 1개</div>
+                          <div class="summary_spec_util style2">사용기간:2025.12.15 ~ 2026.05.05</div>
+                          <div class="summary_spec_mb_point">
+                            <div class="number_text_package">
+                              <span class="number_text_node">400,000</span>
+                              <span class="number_text_unit">P</span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="number_text_package pc_point">
+                        <span class="number_text_node">400,000</span>
+                        <span class="number_text_unit">P</span>
+                      </div>
+                    </div>
+                    <div class="btn_cols">
+                      <ul class="btn_vertex_list">
+                        <li>
+                          <a href="#" class="btn_vertex"><span class="text_node">신청취소</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="data_chip_brick">
+                  <div class="sub_row">
+                    <div class="current_log_cols">
+                      <span class="current_box theme_04">취소완료</span>
+                    </div>
+                    <div class="detail_log_cols">
+                      <ul class="detail_log_list">
+                        <li><span class="detail_log_item">2025.12.12 10:52신청</span></li>
+                        <li><span class="detail_log_item">202512240001</span></li>
+                        <li><span class="detail_log_item highlight">희망 출발일:2026.01.25</span></li>
+                        <li><span class="detail_log_item highlight_2">2025.12.10 22:52 신청취소</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="main_row">
+                    <div class="product_cols">
+                      <div class="product_summary_container align_2">
+                        <a href="#" class="img_cell"><img src="./assets/images/temp_cart_01.png" alt="" /></a>
+                        <a href="#" class="spec_cell">
+                          <div class="summary_spec_copy">
+                            <strong class="keyword">[식품]</strong>
+                            1등급 한우 VIP 명품선물세트 1.6Kg (꽃등심/안심/채끝/특수부위)
+                          </div>
+                          <div class="summary_spec_util">수량 1개</div>
+                          <div class="summary_spec_util style2">사용기간:2025.12.15 ~ 2026.05.05</div>
+                          <div class="summary_spec_mb_point">
+                            <div class="number_text_package">
+                              <span class="number_text_node">400,000</span>
+                              <span class="number_text_unit">P</span>
+                            </div>
+                          </div>
+                        </a>
+                      </div>
+                      <div class="number_text_package pc_point">
+                        <span class="number_text_node">400,000</span>
+                        <span class="number_text_unit">P</span>
+                      </div>
+                    </div>
+                    <div class="btn_cols">
+                      <ul class="btn_vertex_list">
+                        <li>
+                          <a href="#" class="btn_vertex"><span class="text_node">신청취소</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="paging_wrap">
+            <a href="#" class="btn_paging_control first"></a>
+            <a href="#" class="btn_paging_control prev"></a>
+            <ul class="paging_count_list">
+              <li><a href="#" class="btn_paging_count active">1</a></li>
+              <li><a href="#" class="btn_paging_count">2</a></li>
+              <li><a href="#" class="btn_paging_count">3</a></li>
+              <li><a href="#" class="btn_paging_count">4</a></li>
+              <li><a href="#" class="btn_paging_count">5</a></li>
+            </ul>
+            <a href="#" class="btn_paging_control next"></a>
+            <a href="#" class="btn_paging_control last"></a>
+          </div>
+        </div>
       </main>
       <!-- popup -->
       <div class="popup_wrap" id="request_check_popup">
