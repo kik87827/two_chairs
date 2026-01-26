@@ -587,6 +587,9 @@
 .desc_pro_name_row{}
 .pro_name_keyword{font-size:16px; color:#222222; margin-bottom:14px;}
 .pro_name_primary{font-size:24px; color:#222222; font-weight:500; line-height:1.3;}
+.brief_note_wrap{font-size:16px; color:#333333;
+    *{font-size:16px; color:#333333;}
+}
 .brief_tb_wrap{}
 .brief_tb{display:table;width:100%;}
 .brief_tr{display:table-row;
@@ -811,6 +814,10 @@ img.entry_render_img{}
             min-height:50px !important;
             .text_node{font-size:15px;}
         }
+    }
+
+    .brief_note_wrap{font-size:14px; color:#333333;
+        *{font-size:14px; color:#333333;}
     }
 }
 
