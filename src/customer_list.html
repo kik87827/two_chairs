@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
   @@include('./include/_head.html')
 
@@ -16,7 +16,7 @@
           <h2 class="page_title">고객리스트</h2>
         </div>
         <div class="signage_wrap">
-          <div class="signage_block">
+          <div class="signage_block mb_type2">
             <div class="cusinfo_box_wrap">
               <ul class="cusinfo_box_list">
                 <li>
@@ -102,7 +102,7 @@
           <div class="signage_block">
             <div class="sorting_search_container">
               <div class="option_cols">
-                <select class="sorting_select" required>
+                <select class="sorting_select" required style="width: 160px" data-pcwid="160px">
                   <option value="" selected hidden>등급 전체</option>
                   <option value="1">블랙</option>
                   <option value="2">블루</option>
@@ -110,7 +110,7 @@
                   <option value="4">실버</option>
                 </select>
               </div>
-              <div class="input_cols"><input type="text" class="sorting_search_input" placeholder="이름, 휴대전화를 입력하세요" /></div>
+              <div class="input_cols"><input type="text" class="sorting_search_input" placeholder="이름, 휴대전화를 입력하세요" style="width: 390px" data-pcwid="390px" /></div>
               <div class="btn_cols">
                 <a href="#" class="btn_inline_card highlight">
                   <i class="ico shape_search"></i>
@@ -134,15 +134,15 @@
           </div>
           <div class="board_list_row">
             <div class="responsive_list_tb_wrap">
-              <table class="responsive_list_tb">
+              <table class="responsive_list_tb has_td_btn">
                 <colgroup>
                   <col style="width: 7%" />
-                  <col style="width: 10%" />
-                  <col style="width: 10%" />
-                  <col style="width: 10%" />
+                  <col style="width: 15%" />
+                  <col style="width: 15%" />
+                  <col style="width: 15%" />
                   <col />
-                  <col style="width: 5%" />
-                  <col style="width: 5%" />
+                  <col style="width: 12%" />
+                  <col style="width: 12%" />
                 </colgroup>
                 <thead>
                   <tr>
@@ -169,7 +169,7 @@
                       </span>
                     </td>
                     <td class="has_mb_btn ptype2">
-                      <a href="#" class="btn_square"><span class="text_node">선택</span></a>
+                      <a href="#" class="btn_square active"><span class="text_node">선택</span></a>
                     </td>
                   </tr>
                   <tr>
@@ -204,7 +204,7 @@
                       <a href="#" class="btn_square"><span class="text_node">선택</span></a>
                     </td>
                   </tr>
-                  <tr>
+                  <tr class="nodata_tr">
                     <td colspan="7" class="nodata_td"><p class="nodata_para">데이터가 없습니다.</p></td>
                   </tr>
                 </tbody>
@@ -226,6 +226,11 @@
           </div>
         </div>
       </main>
+      <script>
+        $(function () {
+          responsiveWidth();
+        });
+      </script>
       @@include('./include/_footer.html', { btnTop : true})
     </div>
   </body>

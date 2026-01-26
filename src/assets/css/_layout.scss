@@ -5,8 +5,8 @@ html:not(.touchmode){
     ::-webkit-scrollbar-track {background-color: transparent;}
 }
 
-.front_body{}
-.page_wrap{display:flex; flex-direction: column; min-height:100vh; min-width:280px;}
+.front_body{ overflow-x:hidden; position:relative;}
+.page_wrap{display:flex; flex-direction: column; min-height:100vh; min-width:280px; }
 
 .header_wrap{height:90px; flex:0 0 90px; background:#2D1F13; width:100%; position:sticky; top:0; z-index: 30;}
 .header_inner{display:flex; max-width:1400px; margin:0 auto; padding:0 30px; position:relative; min-height:100%; justify-content: center; align-items: center;}

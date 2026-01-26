@@ -1,0 +1,69 @@
+/* login */
+.single_form_container{
+    position:relative;
+}
+.single_form_inner{
+    &:before{display:block;content:'';width:100vw;height:480px; position:absolute;top:0;left:50%; transform: translateX(-50%); background: rgba(45, 31, 19, 0.9);}
+    max-width:570px; position:relative; margin:0 auto;
+}
+.single_top_copy_wrap{
+    position:relative; padding:60px 0; z-index:2;font-size:24px; color:#fff; text-align: center; line-height:1.4;
+    .main_copy{
+
+        strong{ font-weight:700; color:#DD8560;}
+    }
+    .sub_copy{}
+}
+.single_middle_box{
+    background: #FFFFFF; position:relative; z-index:2; box-shadow: 11px 17px 30px rgba(140, 140, 140, 0.2);
+
+    .main_form_row{padding:60px 110px;}
+    .sub_form_row{
+        padding:0 0 40px 0; text-align: center;
+        .note_para{font-size:14px; color:#666; word-break: keep-all;}
+    }
+}
+.field_top_wrap{border-bottom:1px solid #ddd; padding-bottom:40px; margin-bottom:40px; text-align: center;}
+.field_logo_row{
+    img{vertical-align: top;}
+}
+.field_logo_copy{color:#333; font-size:16px; margin-top:16px;}
+.field_middle_wrap{}
+.field_form_block_wrap{}
+.field_form_block{
+    margin-bottom:24px;
+    .label_row{margin-bottom:10px;}
+    .form_row{}
+    &:last-of-type{margin-bottom:0;}
+}
+.field_label_para{font-size:16px; color:#222; line-height:1;}
+input.field_input_box{
+    height:50px; font-size:14px; border:0; background:#F7F7F8; width:100%; box-sizing: border-box; appearance: none; line-height:1; padding:0 15px; color:#222;
+    &::placeholder{color:#999999;}
+    &[type="password"] {
+        &::placeholder{font-size:9px;}
+     }
+}
+.btn_field_submit_row{
+    margin-top:40px;
+}
+.btn_field_submit{display:flex; min-height:50px; color:#fff; font-size:16px; font-weight:600; background:#DD8560; justify-content: center; align-items: center; text-align: center;}
+
+@media (max-width:760px){
+    .single_form_inner{
+        background: rgba(45, 31, 19, 0.9); max-width:100%;
+        &:before{display:none;}
+    }
+    .single_top_copy_wrap{
+        padding:30px 0; font-size:20px;
+        .sub_copy{margin-top:10px;}
+    }
+    .single_middle_box{
+        box-shadow:none;
+        .main_form_row{padding:30px 20px;}
+        .sub_form_row{
+            padding:0 20px 40px 20px;
+        }
+    }
+}
+/* // login */

@@ -790,3 +790,20 @@ function designModal(option) {
     }, 500);
   }
 }
+
+function responsiveWidth() {
+  action();
+  $(window).on("resize", function() {
+    action();
+  });
+
+  function action() {
+    const datapc = $("[data-pcwid]");
+    datapc.css("width", "");
+    if ($(window).width() >= 1400) {
+      datapc.each(function() {
+        $(this).css("width", $(this).attr("data-pcwid"));
+      });
+    }
+  }
+}
