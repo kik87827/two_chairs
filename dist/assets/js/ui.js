@@ -169,7 +169,7 @@ function layoutCommon() {
         }
       }, {
         threshold: 0
-      },
+      }
     );
 
     observer.observe(check_topgo);
@@ -569,7 +569,7 @@ class DesignPopup {
             e.preventDefault();
             this.popupHide(this.selector);
           },
-          false,
+          false
         );
       });
     }
@@ -853,4 +853,21 @@ function tabUI() {
       $(".mbselect_wrap").removeClass("active");
     }
   });
+}
+
+/* 개발 함수 */
+function showInputRequiredModal(message, okcallback = null) {
+  const modalOption = {
+    message,
+
+    modaltype: "",
+
+    okcallback() {
+      if (typeof okcallback === "function") {
+        okcallback(); // 외부 콜백 호출
+      }
+    },
+  };
+
+  designModal(modalOption);
 }
