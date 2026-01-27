@@ -13,11 +13,6 @@ input.box_props_dom{
 }
 .box_props_label{}
 
-.range_input_wrap{
-    .input_cols{flex:1;
-    }
-    .unit_cols{}
-}
 input.range_input{}
 .range_input_unit{}
 
@@ -492,7 +487,7 @@ input.box_props_dom{
     .unit_cols{}
 }
 .range_input_unit{display:inline-block; font-size:14px; color:#222; white-space:nowrap;}
-input.range_input{height:40px; width:100%; box-sizing: border-box; background:transparent; line-height:1; padding:0 48px 0 15px; border:0; appearance: none; font-size:14px; color:#dd8560; font-weight:600;}
+input.range_input{height:40px; width:100%; box-sizing: border-box; background:transparent url("../images/ico_org_calendar.svg") no-repeat calc(100% - 16px) 50%/16px auto; line-height:1; padding:0 48px 0 15px; border:0; appearance: none; font-size:14px; color:#dd8560; font-weight:600;}
 
 /* paging */
 .paging_wrap{margin-top:40px;}

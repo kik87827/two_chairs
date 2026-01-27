@@ -5675,10 +5675,6 @@ input.input_dom::placeholder {
 }
 /* //  */
 /* sorting */
-.range_input_wrap .input_cols {
-  flex: 1;
-}
-
 .sorting_search_container {
   display: flex;
   justify-content: center;
@@ -6770,7 +6766,7 @@ input.range_input {
   height: 40px;
   width: 100%;
   box-sizing: border-box;
-  background: transparent;
+  background: transparent url("../images/ico_org_calendar.svg") no-repeat calc(100% - 16px) 50%/16px auto;
   line-height: 1;
   padding: 0 48px 0 15px;
   border: 0;
