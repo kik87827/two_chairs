@@ -5684,6 +5684,10 @@ input.input_dom::placeholder {
   flex: 1;
 }
 
+.sorting_search_container .input_cols.auto_type {
+  flex: none;
+}
+
 .sorting_search_container .btn_cols {
   display: flex;
   justify-content: center;
