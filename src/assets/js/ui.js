@@ -379,7 +379,7 @@ function stickyAnchorTab() {
       anchor_menu_list_wrap.classList.add("fixed");
     } else {
       if (!btnClickIs) {
-        prose_total.classList.add("active");
+        //prose_total.classList.add("active");
         //anchor_menu_list_wrap.scrollLeft = 0;
         /*  if (activeItem) {
           activeItem.classList.remove("active");
