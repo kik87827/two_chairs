@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
   @@include('./include/_head.html')
 
@@ -229,7 +229,27 @@
       <script>
         $(function () {
           responsiveWidth();
+
+          pointValue();
         });
+
+        function pointValue() {
+          const $metric_board_item = $(".responsive_list_tb .metric_board_item");
+
+          action();
+          $(window).on("resize", function () {
+            action();
+          });
+
+          function action() {
+            let maxWidArray = [];
+            $metric_board_item.css("min-width", "");
+            $metric_board_item.each(function () {
+              maxWidArray.push($(this).outerWidth(true));
+            });
+            $metric_board_item.css("min-width", Math.max.apply(null, maxWidArray));
+          }
+        }
       </script>
       @@include('./include/_footer.html', { btnTop : true})
     </div>

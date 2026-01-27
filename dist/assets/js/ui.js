@@ -169,7 +169,7 @@ function layoutCommon() {
         }
       }, {
         threshold: 0
-      }
+      },
     );
 
     observer.observe(check_topgo);
@@ -486,7 +486,7 @@ function comboUI() {
 
 function datePicker() {
   $(function() {
-    $(".form_input.calendar").datepicker({
+    $(".form_input.calendar,.range_input").datepicker({
       dateFormat: "yy.mm.dd", // 날짜 형식
       /* showButtonPanel: true, // 오늘/완료 버튼 표시
       showMonthAfterYear: true, */
@@ -569,7 +569,7 @@ class DesignPopup {
             e.preventDefault();
             this.popupHide(this.selector);
           },
-          false
+          false,
         );
       });
     }
@@ -806,4 +806,51 @@ function responsiveWidth() {
       });
     }
   }
+}
+
+function listKeyword(target) {
+  const $target = $(target);
+  const $data_toggle_item = $target.find(".data_toggle_item");
+  const $data_keyword_cols = $target.find(".keyword_cols");
+
+  action();
+  $(window).on("resize", function() {
+    action();
+  });
+
+  function action() {
+    let maxArray = [];
+    $data_keyword_cols.css("flex-basis", "");
+    $data_toggle_item.each(function() {
+      const $this = $(this);
+      const $keyword_cols = $this.find(".keyword_cols");
+      maxArray.push($this.find(".data_keyword").outerWidth(true));
+    });
+    $data_keyword_cols.css("flex-basis", Math.max.apply(null, maxArray));
+  }
+}
+
+function tabUI() {
+  const $mbselect_target = $(".mbselect_target");
+  const $mbselect_option = $(".mbselect_option");
+  $mbselect_target.on("click", function(e) {
+    e.preventDefault();
+    const $this = $(this);
+    const $t_p = $this.closest(".mbselect_wrap");
+    const $t_t = $t_p?.find(".mbselect_target");
+    $t_p.toggleClass("active");
+  });
+  $mbselect_option.on("click", function(e) {
+    e.preventDefault();
+    const $this = $(this);
+    const $t_p = $this.closest(".mbselect_wrap");
+    const $t_t = $t_p?.find(".mbselect_target");
+    $t_t.find(".text_node").text($this.text());
+    $t_p.removeClass("active");
+  });
+  $(document).on("click", function(e) {
+    if (!$(e.target).closest(".mbselect_wrap").length) {
+      $(".mbselect_wrap").removeClass("active");
+    }
+  });
 }

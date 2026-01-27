@@ -17,8 +17,8 @@
         </div>
         <div class="page_contents_row">
           <div class="sorting_box">
-            <ul class="sorting_items_list">
-              <li>
+            <div class="sorting_items_container">
+              <div class="sorting_inner_group">
                 <div class="box_props_wrap">
                   <input type="radio" class="box_props_dom" name="while" id="while01" checked />
                   <label for="while01" class="box_props_label">1개월</label>
@@ -29,8 +29,6 @@
                   <input type="radio" class="box_props_dom" name="while" id="while04" />
                   <label for="while04" class="box_props_label">1년</label>
                 </div>
-              </li>
-              <li>
                 <div class="range_input_wrap">
                   <div class="input_cols">
                     <input type="text" class="range_input" value="2025.12.25" />
@@ -40,23 +38,21 @@
                     <input type="text" class="range_input" value="2026.01.25" />
                   </div>
                 </div>
-              </li>
-              <li>
-                <div class="sorting_search_container">
-                  <div class="input_cols"><input type="text" class="sorting_search_input" placeholder="검색어를 입력하세요" /></div>
-                  <div class="btn_cols">
-                    <a href="#" class="btn_inline_card highlight">
-                      <i class="ico shape_search"></i>
-                      <span class="text_node">검색</span>
-                    </a>
-                    <a href="#" class="btn_inline_card">
-                      <i class="ico shape_reload"></i>
-                      <span class="text_node">초기화</span>
-                    </a>
-                  </div>
+              </div>
+              <div class="sorting_search_container">
+                <div class="input_cols"><input type="text" class="sorting_search_input" placeholder="검색어를 입력하세요" /></div>
+                <div class="btn_cols">
+                  <a href="#" class="btn_inline_card highlight">
+                    <i class="ico shape_search"></i>
+                    <span class="text_node">검색</span>
+                  </a>
+                  <a href="#" class="btn_inline_card">
+                    <i class="ico shape_reload"></i>
+                    <span class="text_node">초기화</span>
+                  </a>
                 </div>
-              </li>
-            </ul>
+              </div>
+            </div>
           </div>
           <div class="tab_global_wrap">
             <div class="pctab_wrap">
@@ -179,9 +175,11 @@
                           </div>
                         </a>
                       </div>
-                      <div class="number_text_package pc_point">
-                        <span class="number_text_node">400,000</span>
-                        <span class="number_text_unit">P</span>
+                      <div class="product_pc_else_wrap">
+                        <div class="number_text_package">
+                          <span class="number_text_node">400,000</span>
+                          <span class="number_text_unit">P</span>
+                        </div>
                       </div>
                     </div>
                     <div class="btn_cols">
@@ -230,9 +228,11 @@
                           </div>
                         </a>
                       </div>
-                      <div class="number_text_package pc_point">
-                        <span class="number_text_node">400,000</span>
-                        <span class="number_text_unit">P</span>
+                      <div class="product_pc_else_wrap">
+                        <div class="number_text_package">
+                          <span class="number_text_node">400,000</span>
+                          <span class="number_text_unit">P</span>
+                        </div>
                       </div>
                     </div>
                     <div class="btn_cols">
@@ -281,9 +281,11 @@
                           </div>
                         </a>
                       </div>
-                      <div class="number_text_package pc_point">
-                        <span class="number_text_node">400,000</span>
-                        <span class="number_text_unit">P</span>
+                      <div class="product_pc_else_wrap">
+                        <div class="number_text_package">
+                          <span class="number_text_node">400,000</span>
+                          <span class="number_text_unit">P</span>
+                        </div>
                       </div>
                     </div>
                     <div class="btn_cols">
@@ -330,9 +332,11 @@
                           </div>
                         </a>
                       </div>
-                      <div class="number_text_package pc_point">
-                        <span class="number_text_node">400,000</span>
-                        <span class="number_text_unit">P</span>
+                      <div class="product_pc_else_wrap">
+                        <div class="number_text_package">
+                          <span class="number_text_node">400,000</span>
+                          <span class="number_text_unit">P</span>
+                        </div>
                       </div>
                     </div>
                     <div class="btn_cols">
@@ -538,6 +542,12 @@
       </div>
       <!-- // popup -->
       <script>
+        $(function () {
+          tabUI();
+        });
+
+        datePicker();
+
         document.addEventListener("DOMContentLoaded", function () {
           // 인스턴스 선언
           let request_history_popup = new DesignPopup({
