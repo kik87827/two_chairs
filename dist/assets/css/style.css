@@ -1457,6 +1457,12 @@ input.form_input.calendar {
   background: url("../images/ico_calendar_16.png") no-repeat calc(100% - 13px) 50%/16px auto;
 }
 
+input.form_input.pickup {
+  width: 150px;
+  padding: 0 40px 0 12px;
+  background: url("../images/ico_calendar_16.png") no-repeat calc(100% - 13px) 50%/16px auto;
+}
+
 .btn_quad_wrap {
   display: flex;
   gap: 24px;
@@ -2086,7 +2092,7 @@ input.form_input.calendar {
   transition: 0.4s opacity;
   max-height: calc(100% - 60px);
   position: relative;
-  max-width: 280px;
+  max-width: 320px;
   margin: 30px auto;
   padding: 20px 24px;
   background: #FFFFFF;
@@ -2121,15 +2127,15 @@ input.form_input.calendar {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 24px 0;
+  padding: 18px 0;
   min-height: 50px;
 }
 
 .modal_box_message {
  /* @include font(14px, 700, 1.4, 0, #000); */
   word-break: keep-all;
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 16px;
+  font-weight: 400;
   line-height: 1.4;
   color: #1A1A1A;
 }
