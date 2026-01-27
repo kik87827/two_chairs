@@ -1614,7 +1614,9 @@ input.input_dom{
     }
 }
 .page_contents_row{max-width:1400px; margin:0 auto; padding:0 30px;
-    .tab_global_wrap{padding:0}
+    .board_ui_wrap,
+    .signage_wrap,
+    .tab_global_wrap{padding-left:0;padding-right:0;}
 }
 @media (max-width:760px){
     .middle_info_item{
