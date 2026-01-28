@@ -119,7 +119,9 @@ input.sorting_search_input{
     .pctab_wrap{display:none;}
     .mbselect_wrap{display:block;}
 
-    .tab_global_wrap{padding:0 16px;}
+    .tab_global_wrap{padding:0 16px;
+        &.mb_type2{margin-top:40px;}
+    }
 }
 
 /* list */
@@ -371,9 +373,9 @@ input.sorting_search_input{
     }
 }
 
-.sorting_field_container{display:flex; justify-content: space-between; align-items: center;}
+.sorting_field_container{display:flex; justify-content: space-between; align-items: center; gap:20px;}
 .sorting_field_cols{display:flex; gap:10px;}
-.btn_sorting_group{display:flex; gap:10px; justify-content: flex-end;}
+.btn_sorting_group{display:flex; gap:10px; justify-content: flex-end; white-space: nowrap;}
 
 .tape_tb_wrap{}
 .tape_tb{
@@ -414,6 +416,14 @@ input.sorting_search_input{
     }
 }
 
+@media (max-width:1400px){
+    .sorting_field_cols{flex:1;}
+    .dpbox_container{flex-direction: column; gap:30px;}
+    .dpbox_item{
+        &.auto_cols{flex:1}
+    }
+    .sorting_field_cols{flex-direction: column; gap:10px;}
+}
 @media (max-width:1300px){
     .cusinfo_box_list{
         flex-wrap:wrap; margin-right:-16px;
@@ -421,13 +431,51 @@ input.sorting_search_input{
             flex:0 0 calc(50% - 16px)
         }
     }
+
+    .tape_tb{
+        tr{
+            td{
+                padding:20px 10px;
+                &.nodata_td{
+                    padding:50px 20px;
+                }
+            }
+            &.nodata_tr{
+
+            }
+        }
+    }
+    .multi_items_list{
+        gap:12px 20px;
+    }
+    .current_score_board{
+        display:inline-flex; gap:10px; font-size:16px; font-weight:700; justify-content: flex-end; align-items: center;
+        .shape_node{}
+        .current_score{}
+
+        &.highlight{
+            color:#DD8560;
+            .shape_node{}
+            .current_score{}
+        }
+    }
 }
 @media (max-width:760px){
-    .signage_wrap{padding:0 16px;}
+    .signage_wrap{padding:0 16px;
+        &.mb_gap2{
+            .signage_block{margin-bottom:24px;}
+        }
+    }
     .signage_block{
         &.mb_type2{
             background:none;padding:0;border:0;
         }
+    }
+    .sorting_field_container{gap:16px;}
+    .sorting_field_cols{width:100%;}
+
+    .btn_sorting_group{
+        .btn_inline_card{flex:1;justify-content: center;}
     }
 
     .notice_copy_wrap{padding:0 0 0 0;
@@ -498,6 +546,60 @@ input.sorting_search_input{
     .detail_log_item{font-size:14px;}
 
     .current_box{height:26px; line-height:24px; font-size:10px; font-weight:500;}
+
+
+    .dpbox_container{gap:24px; flex-direction: column;}
+    .dpbox_item{
+        &.auto_cols,
+        &.long_cols{flex:1;}
+    }
+    .dpbox_title_row{}
+    .dpbox_title{
+        &:before{
+            width:4px; height:12px;top:2px;
+        }
+    }
+    .dpbox_flex_list{
+        flex-direction: column;gap:0;
+        > li{
+            .point_card{background:#f8f8f8;}
+            margin-bottom:-1px;
+        }
+    }
+
+
+    .sorting_field_container{flex-direction: column;}
+    .sorting_field_cols{flex-direction: column; gap:16px;}
+    .btn_sorting_group{}
+
+    .tape_tb{
+        display:block;
+        tbody{
+            display:block;
+        }
+        tr{
+            display:block; border-bottom:1px solid #ddd; padding:20px 16px;
+            td{
+                display:block;border:0; padding:0 0 6px 0; width:auto; white-space: normal; text-align:left;
+                &:last-of-type{padding-bottom:0;}
+                &.nodata_td{
+                    padding:50px 20px; text-align:center;
+                }
+            }
+        }
+        .nodata_para{font-size:14px;}
+    }
+
+    .multi_items_list{
+        display:flex; gap:10px; padding-bottom:6px;
+        .text_node{font-size:14px}
+    }
+    .tape_data_node{font-size:14px;}
+
+    .current_score_board{min-width:0 !important; font-size:14px; gap:5px;}
+    .multi_items_list{
+        justify-content: space-between;
+    }
 }
 @media (max-width:359px){
     .cusinfo_box_list{
@@ -582,7 +684,7 @@ input.box_props_dom{
 .box_props_label{display:flex; cursor:pointer; height:42px;border:1px solid #ddd; margin-right:-1px; align-items: center; background:#fff;flex:0 0 90px; justify-content: center; padding:10px; font-size:16px; font-weight:500; color:#aaa; box-sizing:border-box ;}
 .range_input_wrap{
     display:flex; max-width:360px; background:#fff; border:1px solid #dd8560; height:42px; box-sizing: border-box; align-items: center;
-    .input_cols{}
+    .input_cols{flex:1;}
     .unit_cols{}
 }
 .range_input_unit{display:inline-block; font-size:14px; color:#222; white-space:nowrap;}

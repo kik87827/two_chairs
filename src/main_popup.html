@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ko">
+  @@include('./include/_head.html')
+
+  <body class="front_body">
+    <div class="notice_swiper swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="#" class="notice_swiper_item"><img src="./assets/images/main_notice.png" alt="" /></a>
+          <a href="#" class="notice_swiper_item"><img src="./assets/images/main_notice.png" alt="" /></a>
+          <a href="#" class="notice_swiper_item"><img src="./assets/images/main_notice.png" alt="" /></a>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        noticePop();
+      });
+      function noticePop() {
+        $("html,body").addClass("touchDis");
+        window.scrollTo(0, 0);
+
+        let noticeSwiper = new Swiper(".notice_swiper", {
+          loop: true,
+          speed: 500,
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+          },
+          pagination: {
+            el: ".notice_popup_container .swiper-pagination",
+            clickable: true, // 사용자가 페이지 버튼 클릭 가능
+          },
+        });
+      }
+    </script>
+  </body>
+</html>

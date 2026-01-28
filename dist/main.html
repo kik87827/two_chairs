@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 
 <head>
@@ -1141,11 +1141,53 @@
 			</div>
 
 		</main>
+
+		<!-- notice popup -->
+		<div class="notice_popup_zone" style="display: none">
+			<div class="notice_popup_tb">
+				<div class="notice_popup_td">
+					<div class="notice_popup_container">
+						<div class="notice_swiper swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<a href="#" class="notice_swiper_item"><img src="./assets/images/main_notice.png" alt="" /></a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="notice_swiper_item"><img src="./assets/images/main_notice.png" alt="" /></a>
+								</div>
+								<div class="swiper-slide">
+									<a href="#" class="notice_swiper_item"><img src="./assets/images/main_notice.png" alt="" /></a>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+						<div class="notice_util_items">
+							<div class="props_chip">
+								<input type="checkbox" class="props_form" id="today_check" />
+								<label for="today_check" class="props_conlabel">오늘 하루 그만보기</label>
+							</div>
+							<button class="btn_desc_item">
+								<span class="text_node">닫기</span>
+								<i class="ico_close"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // notice popup -->
 		<script>
 			document.addEventListener("DOMContentLoaded", () => {
 				mvSwiper();
 				gridControl();
 				stickyAnchorTab();
+
+				// 퍼블확인용
+				let url = window.location.href.split("?")[1];
+				let url_2 = url !== undefined ? url.split("#")[0] : null;
+				if (url_2 === "popup") {
+					noticePop();
+				}
 			});
 
 			function mvSwiper() {
@@ -1313,6 +1355,47 @@
 						targetItem.classList.remove("type2");
 					});
 				}
+			}
+
+			function noticePop() {
+				// 오늘하루보지 않기
+				const notice_today = document.getElementById("today_check");
+				const todayKey = "todayPopup";
+				// 오늘 날짜 (YYYY-MM-DD)
+				const today = new Date().toISOString().split("T")[0];
+				const storedDate = localStorage.getItem(todayKey);
+				notice_today.addEventListener("click", (e) => {
+					if (e.currentTarget.checked && notice_today.checked) {
+						localStorage.setItem(todayKey, today);
+					}
+				});
+
+				// 오늘 하루 보지 않기
+				if (storedDate === today) {
+					return;
+				}
+				$(".notice_popup_zone").fadeIn(500, function() {
+					$("html,body").addClass("touchDis");
+					window.scrollTo(0, 0);
+				});
+
+				let noticeSwiper = new Swiper(".notice_swiper", {
+					loop: true,
+					speed: 500,
+					autoplay: {
+						delay: 4000,
+						disableOnInteraction: false,
+					},
+					pagination: {
+						el: ".notice_popup_container .swiper-pagination",
+						clickable: true, // 사용자가 페이지 버튼 클릭 가능
+					},
+				});
+
+				$(".btn_desc_item").on("click", function(e) {
+					e.preventDefault();
+					$(".notice_popup_zone").fadeOut(500);
+				});
 			}
 		</script>
 
