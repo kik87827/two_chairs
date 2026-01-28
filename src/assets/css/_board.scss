@@ -103,7 +103,7 @@ input.sorting_search_input{
     }
 }
 
-@media (max-width:760px){
+@media (max-width:767px){
     .sorting_search_container{
         flex-direction: column; gap:16px;
         .option_cols,
@@ -460,7 +460,7 @@ input.sorting_search_input{
         }
     }
 }
-@media (max-width:760px){
+@media (max-width:767px){
     .signage_wrap{padding:0 16px;
         &.mb_gap2{
             .signage_block{margin-bottom:24px;}
@@ -717,7 +717,7 @@ input.range_input{height:40px; width:100%; box-sizing: border-box; background:tr
     } */
      .range_input_wrap{flex:1; max-width:100%; width:100%;}
 }
-@media (max-width:760px){
+@media (max-width:767px){
     .board_fraction_row{ margin-bottom:14px;}
     .board_fraction_item{
         font-size:16px;

@@ -1,0 +1,52 @@
+.form_message_wrap{text-align: center; margin-bottom:24px;}
+.form_message{font-size:14px;}
+
+.respon_formtb_wrap{background:#F8F8F8; padding:24px;}
+.respon_formtb{display:table;width:100%;}
+.respon_formtr{display:table-row;
+    &:last-of-type{
+        .respon_formcell{padding-bottom:0;}
+    }
+}
+.respon_formcell{
+    display:table-cell;vertical-align:top; padding-bottom:16px;
+    &.define_th{width:1px;white-space: nowrap; padding-right:24px; padding-top:4px;}
+    &.define_td{
+        .indent_para{font-size:12px; color:#999999; margin-top:8px;}
+    }
+}
+.respon_form_thtext{display:inline-block; font-size:14px; color:#222222;}
+
+input.form_input_box{height:36px; width:100%; box-sizing: border-box; line-height:1; appearance: none; padding:0 12px; border:1px solid #ddd; background:#fff;}
+
+.btn_submit_card_wrap{display:flex; text-align: center; justify-content: center; margin-top:24px;}
+
+.btn_submit_card{
+    display:inline-flex; min-width:160px; text-align: center; justify-content: center; align-items: center; min-height:44px; box-sizing: border-box; padding:10px 15px; background:#2D1F13;
+    .text_node{display:inline-block; color:#fff; font-size:14px; font-weight:500;}
+}
+
+@media (max-width:767px){
+    .form_message_wrap{margin-bottom:16px;}
+
+    .respon_formtb_wrap{padding:16px;}
+    .respon_formtb{display:block}
+    .respon_formtr{display:block; margin-bottom:16px;
+        &:last-of-type{
+            margin-bottom:0;
+            .respon_formcell.define_td{padding-bottom:0;}
+        }
+    }
+    .respon_formcell{
+        display:block; padding-bottom:0;
+        &.define_th{width:auto;white-space: normal; padding:0;}
+        &.define_td{
+            .indent_para{font-size:12px; color:#999999; margin-top:8px;}
+        }
+    }
+    .respon_form_thtext{ padding-bottom:8px;}
+    .btn_submit_card{
+        min-width:0; min-height:50px;flex:1; display:flex;
+    }
+
+}

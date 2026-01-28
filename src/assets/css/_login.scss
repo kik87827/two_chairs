@@ -49,7 +49,7 @@ input.field_input_box{
 }
 .btn_field_submit{display:flex; min-height:50px; color:#fff; font-size:16px; font-weight:600; background:#DD8560; justify-content: center; align-items: center; text-align: center;}
 
-@media (max-width:760px){
+@media (max-width:767px){
     .single_form_inner{
         background: rgba(45, 31, 19, 0.9); max-width:100%;
         &:before{display:none;}

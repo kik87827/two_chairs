@@ -35,7 +35,7 @@ input.props_form{
     .ico_close{display:inline-block; width:20px; height:20px; @include bgicon; background-image:url("../images/ico_close_20.svg");}
 }
 
-@media (max-width:760px){
+@media (max-width:767px){
     .notice_popup_td{padding:16px;}
     .notice_popup_container{width:100%;}
 

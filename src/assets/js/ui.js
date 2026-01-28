@@ -88,7 +88,7 @@ function layoutCommon() {
     let btn_total_close = document.querySelector(".btn_total_close");
 
     window.addEventListener("resize", () => {
-      if (window.innerWidth <= 760) {
+      if (window.innerWidth <= 767) {
         if (total_info_wrap?.classList.contains("active")) {
           front_body.classList.add("touchDis");
         } else {
@@ -103,7 +103,7 @@ function layoutCommon() {
       if (total_info_wrap) {
         total_info_wrap.classList.toggle("active");
       }
-      if (window.innerWidth <= 760) {
+      if (window.innerWidth <= 767) {
         front_body.classList.add("touchDis");
       }
     });
@@ -119,7 +119,7 @@ function layoutCommon() {
       if (total_info_wrap) {
         total_info_wrap.classList.remove("active");
       }
-      if (window.innerWidth <= 760) {
+      if (window.innerWidth <= 767) {
         front_body.classList.remove("touchDis");
       }
     });
@@ -165,7 +165,7 @@ function layoutCommon() {
           resetBottom();
         }
       },
-      { threshold: 0 },
+      { threshold: 0 }
     );
 
     observer.observe(check_topgo);
@@ -565,7 +565,7 @@ class DesignPopup {
             e.preventDefault();
             this.popupHide(this.selector);
           },
-          false,
+          false
         );
       });
     }
