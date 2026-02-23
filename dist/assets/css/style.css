@@ -1373,6 +1373,7 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
 
 .count_control_wrap {
   display: inline-flex;
+  width: 120px;
   height: 34px;
   background: #fff;
   border: 1px solid #ddd;

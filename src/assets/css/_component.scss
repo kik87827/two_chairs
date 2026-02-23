@@ -29,7 +29,7 @@
     }
 }
 
-.count_control_wrap{display:inline-flex; height:34px; background:#fff;border:1px solid #ddd; box-sizing: border-box;}
+.count_control_wrap{display:inline-flex; width:120px; height:34px; background:#fff;border:1px solid #ddd; box-sizing: border-box;}
 .count_control_navi{
     flex:0 0 34px; width:34px;border-right:1px solid #ddd; box-sizing: border-box; position:relative;
     &:before,
