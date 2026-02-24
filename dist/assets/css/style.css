@@ -522,6 +522,28 @@ html:not(.touchmode) ::-webkit-scrollbar-track {
   width: 24px;
   height: 24px;
   display: inline-block;
+ /* 260224 카운트 추가 */
+  position: relative;
+}
+
+/* 260224 카운트 추가 */
+.cout_layer {
+  display: inline-block;
+  min-width: 14px;
+  height: 14px;
+  text-align: center;
+  position: absolute;
+  top: -1px;
+  left: 14px;
+  white-space: nowrap;
+  border-radius: 14px;
+  background: #FA8A1A;
+  line-height: 14px;
+  font-size: 10px;
+  color: #fff;
+  font-weight: 700;
+  padding: 0 4px;
+  box-sizing: border-box;
 }
 
 .btn_header_menu {
